@@ -19,6 +19,13 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.section-divider {
+    border: none;
+    border-top: 1px solid black;
+    width: 90%;
+    margin: 0px auto;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -186,62 +193,120 @@ section#contact {
     margin-top: 50px;
 }
 
-.experience {
-    background-color: #f5f5f5;
-    padding: 80px 20px;
-}
-
 .experience-container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 40px;
 }
 
 .experience-title {
-    font-size: 36px;
-    margin-bottom: 40px;
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.experience-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.experience-row:before {
+    content: '';
+    position: absolute;
+    left: 44%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #ddd;
+    height: 100%;
+}
+
+.experience-left {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 50px;
+    text-align: right;
+}
+
+.experience-right {
+    flex: 1;
+    max-width: 55%;
+    padding-left: 50px;
+    text-align: left;
+}
+
+.experience-logo {
+    width: 130px;
+    height: auto;
+    margin-bottom: 25px;
+    display: block;
+    position: relative;
+    left: -65px;
+}
+
+.experience-date {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 10px;
     font-weight: bold;
+    text-align: center;
+    margin-right: 11%;
 }
 
-.experience-item {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    padding: 20px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.experience-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.experience-location {
+    font-size: 20px;
+    font-style: italic;
+    color: #555;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-right: 19%;
+   
 }
 
 .experience-job-title {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
+    margin-bottom: 12px;
+    text-align: center;
 }
 
 .experience-company {
-    font-size: 18px;
-    color: 
+    font-size: 1.6rem;
+    font-weight: bold;
+    
 }
 
+.experience-description {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
 
-@media screen and (max-width: 768px) {
-    .about-content {
+.experience-row {
+    margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    .experience-row {
         flex-direction: column;
-        align-items: center;
     }
 
-    .about-text {
-        padding-right: 0;
+    .experience-left,
+    .experience-right {
+        max-width: 100%;
+        flex: none;
         text-align: center;
-        margin-bottom: 20px;
     }
 
-    .about-photo {
-        margin-top: 20px;
-        width: 100%;
+    .experience-row:before {
+        display: none;
     }
 }
