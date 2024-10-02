@@ -31,7 +31,7 @@
         <div class="hero-content">
             <h1 class="hero-title">Everest Yang</h1>
             <p class="hero-subtitle">Computer Science @ Brown University</p>
-            <a href="#projects" class="hero-button">View My Work</a>
+            <a href="#about" class="hero-button">View My Work</a>
         </div>
     </section>
 
@@ -42,13 +42,14 @@
             <div class="about-text">
                 <h2 class="about-title">About Me</h2>
                 <p class="about-description">
-                    Hi, my name is Everest Yang, and I’m from Massachusetts. I am currently an undergraduate student at Brown University pursuing a B.S. in Computer Science (Tracks: AI/ML & Systems). 
+                    Hi, my name is Everest Yang, and I’m from Massachusetts. I am currently an undergraduate student at <u>Brown University</u> pursuing a <i>B.S. in Computer Science (Tracks: AI/ML & Systems)</i>. 
                     <br><br>
                     After graduating, I am planning to pursue a M.S. in Computer Science and aspire to be a Software Engineer. My interests range from Computer Vision to Wireless Networks, Systems, and more. 
                     <br><br>
                     In my free time, I enjoy playing tennis, hiking, and spending time with my friends and family.
                     <br><br>
-                    If you are a prospective recruiter, please contact me for my resume at everest_yang@brown.edu or connect with me on LinkedIn!
+                    If you are a prospective recruiter, please contact me for my resume at <a href="mailto:everest_yang@brown.edu">everest_yang@brown.edu</a> or connect with me on <a href="https://www.linkedin.com/in/everestyang/" target="_blank">LinkedIn</a>
+                    !
                 </p>
             </div>
             <div class="about-photo">
@@ -73,8 +74,8 @@
                 <p class="experience-date">Jun 2024 - Aug 2024</p>
             </div>
             <div class="experience-right">
-                <h3 class="experience-company">NASA Johnson Space Center</h3><br>
-                <p>
+                <h3 class="experience-company">NASA Johnson Space Center</h3>
+                <p class = "experience-description">
                     <br>
                     • Conducted Antenna Data Science research on Wi-Fi performance for pressurized spacecraft. Used ISS signal surveys from Astrobee, NASA’s autonomous free-flying robot
                     <br><br>
@@ -94,8 +95,8 @@
                 <p class="experience-date">Jan 2024 - Aug 2024</p>
             </div>
             <div class="experience-right"><br><br><br>
-                <h3 class="experience-company">UC San Diego - NeuroML Lab</h3><br>
-                <p>
+                <h3 class="experience-company">UC San Diego - NeuroML Lab</h3>
+                <p class = "experience-description">
                     <br>
                     • Conducted Computational Neuroscience research under Professor Meenakshi Khosla: Built PyTorch-based Deep Neural Network framework for auditory recognition tasks to better understand AI explainability
                     <br><br>
@@ -108,13 +109,13 @@
         <div class="experience-row">
             <div class="experience-left">
                 <img src="images/umassboston.jpg" alt="UMass Boston Logo" class="experience-logo">
-                <h3 class="experience-job-title">Research Intern</h3>
+                <h3 class="experience-job-title">Research Intern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
                 <p class="experience-location">Boston, MA</p>
                 <p class="experience-date">Sept 2021 - Aug 2022</p>
             </div>
-            <div class="experience-right"><br><br><br>
-                <h3 class="experience-company">UMass Boston - Knowledge Discovery Lab</h3><br>
-                <p> 
+            <div class="experience-right"><br><br>
+                <h3 class="experience-company">UMass Boston - Knowledge Discovery Lab</h3>
+                <p class = "experience-description"> 
                     <br>
                     • Conducted Time Series Machine Learning research under Dr. Yong Zhuang: Created Auto-Regressive Integrated Moving Average (ARIMA) models to forecast river streamflow, a key indicator of flooding
                     <br><br>
@@ -128,6 +129,29 @@
     </div>
 </section>
 
+<hr class="section-divider">
+
+<section id="contact" class="contact">
+    <div class="contact-container">
+        <h2 class="contact-title">Contact Me</h2>
+        <form class="contact-form" action="YOUR_FORM_PROCESSING_URL" method="POST">
+            <div class="form-group">
+                <label for="what-brings-you">What brings you here?</label>
+                <input type="text" id="what-brings-you" name="what-brings-you" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="contact-button">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- make a better footer at the end -->
+<!-- <footer>
+    <p>&copy; 2024 Everest Yang. All rights reserved.</p>
+</footer> -->
 
 </body>
 </html>

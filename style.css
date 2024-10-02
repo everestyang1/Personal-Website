@@ -26,6 +26,10 @@ header {
     margin: 0px auto;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -169,6 +173,7 @@ section#contact {
 
 .about-title {
     font-size: 36px; 
+    margin-top: 15px; 
     margin-bottom: 20px; 
     text-align: center;
 }
@@ -182,6 +187,7 @@ section#contact {
 .about-photo {
     flex: 1; 
     display: flex;
+    margin-top: 15px;
     justify-content: center;
 }
 
@@ -194,7 +200,7 @@ section#contact {
 }
 
 .experience-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 40px;
 }
@@ -203,6 +209,7 @@ section#contact {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 40px;
+    transform: translateX(-30px);
 }
 
 .experience-row {
@@ -287,11 +294,38 @@ section#contact {
 .experience-description {
     font-size: 1rem;
     color: #333;
-    line-height: 1.6;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
 }
 
 .experience-row {
     margin-bottom: 50px;
+}
+
+.experience-row:nth-last-child(2) .experience-logo {
+    transform: translateX(-5px);
+}
+
+.experience-row:nth-last-child(2) .experience-job-title {
+    transform: translateX(15px);
+}
+.experience-row:nth-last-child(2) .experience-location {
+    transform: translateX(20px);
+}
+.experience-row:nth-last-child(2) .experience-date {
+    transform: translateX(5px);
+}
+
+.experience-row:last-child .experience-logo {
+    width: 150px;
+    display: block;
+    margin-left: 0;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+
+.experience-row:last-child .experience-location {
+    transform: translateX(5px);
 }
 
 @media (max-width: 768px) {
