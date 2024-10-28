@@ -110,26 +110,74 @@ html {
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+.typing-animation {
+    border-right: 3px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.typing {
+    animation: typing 2.5s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+}
+
+
+
+
+.rotating-text {
+    height: 40px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
 
 .hero-subtitle {
     font-size: 34px;
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .hero-button {
-    background-color: 	#8B4513;
+    background-color: rgba(139, 69, 19, 0.9);
     color: white;
-    padding: 12px 25px;
+    padding: 15px 32px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
     font-size: 18px;
-    transition: background-color 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
 }
 
 .hero-button:hover {
     background-color: #fb8500;
+    /* background-color: transparent; */
+    border: 2px solid white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 section {
@@ -227,7 +275,7 @@ section#contact {
     left: 44%;
     top: 0;
     bottom: 0;
-    width: 1px;
+    width: 3px;
     background: #ddd;
     height: 100%;
 }
