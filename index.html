@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Everest Yang | Portfolio</title>
+    <link rel="icon" type="image/gif" href="images\nugget-chicken.gif">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#contact-section">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -45,16 +46,36 @@
                 <p class="about-description">
                     Hi, my name is Everest Yang, and I’m from Massachusetts. I am currently an undergraduate student at <u>Brown University</u> pursuing a <i>B.S. in Computer Science (Tracks: AI/ML & Systems)</i>. 
                     <br><br>
-                    After graduating, I am planning to pursue a M.S. in Computer Science and aspire to be a Software Engineer. My interests range from Computer Vision to Wireless Networks, Systems, and more. 
+                    After graduating, I am planning to pursue a M.S. in Computer Science and aspire to be a Software Engineer. My interests range from Deep Learning to Cloud Computing, Systems, and more. 
                     <br><br>
-                    In my free time, I enjoy playing tennis, hiking, and spending time with my friends and family.
+                    In my previous internship at NASA, I worked on wireless networking infra to establish Wi-Fi and cellular communication (3GPP) on the Moon. Specifically, my team is developing lunar surface communication systems between spacesuits, the rover, and other EVAs. You can read more in my <a href="#experience">Experience</a> or Blog Sections!
                     <br><br>
-                    If you are a prospective recruiter, please contact me for my resume at <a href="mailto:everest_yang@brown.edu">everest_yang@brown.edu</a> or connect with me on <a href="https://www.linkedin.com/in/everestyang/" target="_blank">LinkedIn</a>
-                    !
+                    In my free time, I enjoy playing tennis, hiking, trying new foods, and spending time with my friends and family.
+                    <br><br>
+                    If you are interested in connecting or a prospective recruiter, please check out my <a href="#contact-section">Contact</a> Section!
+                    <!-- <a href="mailto:everest_yang@brown.edu">everest_yang@brown.edu</a> or connect with me on <a href="https://www.linkedin.com/in/everestyang/" target="_blank">LinkedIn</a>
+                    ! -->
                 </p>
             </div>
+
             <div class="about-photo">
-                <img src="images/everest.jpg" alt="Everest Yang Portrait" class="photo" />
+                <img src="images/everest.jpg" alt="Everest Yang Portrait" class="main-photo" />
+                <div class="smaller-photos">
+                    <div class="smaller-photo-container">
+                        <img src="images\IMG_2968.jpg" alt="Me with the Shuttle Carrier Aircraft at the NASA Johnson Space Center" class="smaller-photo">
+                        <p class="photo-caption">Shuttle Carrier Aircraft<br> at the NASA Johnson Space Center</p>
+                    </div>
+
+                    <div class="smaller-photo-container">
+                        <img src="images\IMG_3567.jpg" alt="My intern partner Kim and I with NASA's humanoid, Valkyrie" class="smaller-photo">
+                        <p class="photo-caption">My intern partner Kim<br> and I with NASA's Humanoid, Valkyrie</p>
+                    </div>
+
+                    <div class="smaller-photo-container">
+                        <img src="images\IMG_3310.jpg" alt="Me inside a mockup of the International Space Station" class="smaller-photo">
+                        <p class="photo-caption">Mockup of the International Space Station (ISS),<br> inside the JEM module</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -78,12 +99,13 @@
                 <h3 class="experience-company">NASA Johnson Space Center</h3>
                 <p class = "experience-description">
                     <br>
-                    • Conducted Antenna Data Science research on Wi-Fi performance for pressurized spacecraft. Used ISS signal surveys from Astrobee, NASA’s autonomous free-flying robot
+                    • Conducted Antenna Data Science research on Wi-Fi signal propagation for pressurized spacecraft; used ISS signal surveys from Astrobee, NASA’s autonomous free-flying robot
                     <br><br>
-                    • First Author publication to IEEE International Conference. Research will be used for future missions such as the Artemis program, Lunar Gateway, Orbital Reef. Publication is first in the field; Received $1.5k travel grant                    <br><br>
-                    • Spearheaded Bash & Flux scripts for real-time KPI network monitoring of Lunar Wi-Fi and 3GPP (4G LTE) field testing. Fixed issues related to GPS tracking, GUI systems, and iperf on LattePanda SBCs
+                    • First Author NASA publication in IEEE International Conference; research used for future missions such as the Artemis program, Lunar Gateway, Orbital Reef; publication is first in the field; recieved $1.5k from the NASA Rhode Island Space Grant
                     <br><br>
-                    • Developed capture/visualization software using InfluxDB, Grafana, and Docker. Wrote yaml file to translate JSON dashboards as provisioning text files for version control of dashboard changes
+                    • Spearheaded Bash & Flux scripts for real-time KPI network monitoring of Lunar Wi-Fi and 3GPP (4G LTE) field testing; fixed issues related to GPS tracking, GUI systems, and iperf on LattePanda SBCs
+                    <br><br>
+                    • Developed capture/visualization software using InfluxDB, Grafana, and Docker; wrote YAML file to translate JSON dashboards as provisioning text files for version control of dashboard changes
                 </p>
             </div>
         </div>
@@ -132,22 +154,64 @@
 
 <hr class="section-divider">
 
-<section id="contact" class="contact">
-    <div class="contact-container">
-        <h2 class="contact-title">Contact Me</h2>
-        <form class="contact-form" action="YOUR_FORM_PROCESSING_URL" method="POST">
-            <div class="form-group">
-                <label for="what-brings-you">What brings you here?</label>
-                <input type="text" id="what-brings-you" name="what-brings-you" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="contact-button">Send Message</button>
-        </form>
+
+<!--Contact Section-->
+<section class ="contact" id="contact-section">
+    <h2 class="contact-title">Contact Me!</h2><br>
+
+    <div id="console">
+
+        <span class="first-color">public static</span>
+        <span class="third-color">void</span>
+        <span class="fifth-color">contact</span>
+        <span class="second-color">() {</span>
+            <ul>
+                <span class="third-color">Email</span>
+                <span class="second-color">email = </span>
+                <span class="first-color">new</span>
+                <span class="second-color">Email(</span><span class="fourth-color">"</span> 
+                <span ><a href="mailto:everest_yang@brown.edu" class="fourth-color">everest_yang@brown.edu</a></span>
+                <span class="fourth-color">"</span><span class="second-color">)</span><span class="second-color">;</span>
+                <br>
+                <span class="third-color">String[]</span>
+                <span class="second-color">links = </span>
+                <span class="first-color">new </span>
+                <span class="third-color">String[]</span>
+                <span class="second-color">{</span>
+                <br>
+                <ul>
+                <span class="fourth-color">"</span>
+                <a href="https://www.linkedin.com/in/everestyang/" class= "fourth-color" target="_blank">LinkedIn</a>
+                <span class="fourth-color">"</span><span class="second-color">,</span>
+                <br>
+                <span class="fourth-color">"</span>
+                <a href="https://github.com/everestyang1" class= "fourth-color" target="_blank">Github</a> 
+                <span class="fourth-color">"</span><span class="second-color">,</span>
+                <br>
+                </ul>
+                <span class="second-color">}</span>
+            </ul>
+                <span class="second-color">}</span>
+                <br>
+            </ul>
     </div>
+
+
+    <!-- <div class="contact-logos">
+        <a href="mailto:everest_yang@brown.edu" class="gmail">
+            <img src="images/gmail.png" alt="Gmail">
+        </a>
+        
+        <a href="https://www.linkedin.com/in/everestyang/" class="linkedin" target="_blank">
+            <img src="images/linkedin.png" alt="LinkedIn">
+        </a>
+        
+        <a href="https://github.com/everestyang1" class="github" target="_blank">
+            <img src="images/github.png" alt="GitHub">
+        </a>
+    </div> -->
 </section>
+
 
 <!-- make a better footer at the end -->
 <!-- <footer>
