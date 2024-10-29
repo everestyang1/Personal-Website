@@ -47,6 +47,7 @@ html {
     margin-left: 90px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
+
 .logo a:hover {
     color: 	#8B4513;
 }
@@ -130,9 +131,6 @@ html {
     from, to { border-color: transparent }
     50% { border-color: white }
 }
-
-
-
 
 .rotating-text {
     height: 40px;
@@ -416,6 +414,7 @@ section#contact {
 .contact {
 	background-color: white;
 	padding: 50px;
+    height: 440px;
 }
 
 .contact-title {
@@ -428,12 +427,12 @@ section#contact {
 #console {
 	margin: 40px;
 	margin-top: -10px;
-    margin-left: 120px;
+    margin-left: 100px;
 	padding: 30px;
 	overflow-y:auto;
 	line-height: 22px;
-	height: 230px;
-	width: 540px;
+	height: 220px;
+	width: 530px;
 	font-size: 90%;
 	font-family: Monaco,monospace;
 	border-radius: 4px;
@@ -467,11 +466,11 @@ ul {
 .contact-logos {
   display: flex;
   flex-direction: row;
-  gap: 80px;
+  gap: 75px;
   position: relative;
   left: -80px;
   justify-content: flex-end;
-  top: -220px;
+  top: -235px;
 }
 
 .contact-logos a {
@@ -485,9 +484,41 @@ ul {
 }
 
 .contact-logos .gmail-logo {
-    width: 150px; 
+    width: 160px; 
     height: 130px;
-    
+    margin-left:30px; 
+}
+
+.logo-caption {
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 10px;
+    margin-left:10px;
+}
+
+.contact-logos a, .logo-caption a {
+    text-decoration: none;
+}
+
+footer {
+    padding: 2rem;
+    background-color: #f5f5f5;
+    border-top: 1px solid hsl(0, 0%, 93%);
+    text-align: center;
+    color: #666;
+}
+
+.heart {
+    color: #ef4444;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
 }
 
 /* @media (max-width: 768px) {
