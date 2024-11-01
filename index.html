@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Everest Yang | Portfolio</title>
     <link rel="icon" type="image/gif" href="images\nugget-chicken.gif">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -44,17 +45,15 @@
             <div class="about-text">
                 <h2 class="about-title">About Me</h2>
                 <p class="about-description">
-                    Hi, my name is Everest Yang, and I’m from Massachusetts. I am currently an undergraduate student at <u>Brown University</u> pursuing a <i>B.S. in Computer Science (Tracks: AI/ML & Systems)</i>. 
-                    <br><br>
+                    Hi, my name is Everest Yang, and I’m from Massachusetts. I am currently an undergraduate student at <u>Brown University</u> pursuing a <i>B.S. in Computer Science (Tracks: AI/ML & Systems)</i>.
+                    <br>
                     After graduating, I am planning to pursue a M.S. in Computer Science and aspire to be a Software Engineer. My interests range from Deep Learning to Cloud Computing, Systems, and more. 
                     <br><br>
-                    In my previous internship at NASA, I worked on wireless networking infra to establish Wi-Fi and cellular communication (3GPP) on the Moon. Specifically, my team is developing lunar surface communication systems between spacesuits, the rover, and other EVAs. You can read more in my <a href="#experience">Experience</a> or Blog Sections!
+                    In my previous internship at NASA, I worked on wireless networking infra to establish Wi-Fi and cellular communication (3GPP) on the Moon. Specifically, my team is developing lunar surface communication systems between spacesuits, the rover, and other EVAs. You can read more in my <a href="#experience">Experience</a> or Blog sections!
                     <br><br>
                     In my free time, I enjoy playing tennis, hiking, trying new foods, and spending time with my friends and family.
                     <br><br>
-                    If you are interested in connecting or a prospective recruiter, please check out my <a href="#contact-section">Contact</a> Section!
-                    <!-- <a href="mailto:everest_yang@brown.edu">everest_yang@brown.edu</a> or connect with me on <a href="https://www.linkedin.com/in/everestyang/" target="_blank">LinkedIn</a>
-                    ! -->
+                    If you are interested in connecting or a prospective recruiter, please check out my <a href="#contact-section">Contact</a> section!
                 </p>
             </div>
 
@@ -155,6 +154,76 @@
 <hr class="section-divider">
 
 
+<!-- Projects -->
+<section class="projects" id="projects">
+
+    <div class="swiper project-main">
+        <h1>Projects</h1>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+
+        <div class="swiper-wrapper">
+            <!-- Project 1 -->
+            <div class="swiper-slide">
+                <div class="project-card">
+                    <div class="project-text">
+                        <h2 class="project-title">Perovskite Visuals and Degradation eXperiment</h2>
+                        <div class="project-subtitle"> <u>Brown Space Engineering: Flight Software Team</u> </div>
+                        <p class="project-description">
+                            Building Embedded Operating System of PVDX, Brown's 3U-CubeSat under NASA ELaNa program, designed to test next-gen perovskite solar cells in harsh orbital environments
+                        </p>
+                        <a class="project-button" href="https://www.brownspace.io/subgroup.html" target="_blank">BSE Website</a>
+                    </div>
+                    <img width="45%" src="images\pvdx.png">
+                
+                </div>
+            </div>
+        
+            <!-- Project 2 -->
+            <div class="swiper-slide">
+                <div class="project-card">
+                    <div class="project-text">
+                        <h2 class="project-title">Audio ML Language Classifier</h2>
+                        <div class="project-subtitle"> <u>UCSD Association of Computing Machinery (ACM)</u> </div>
+                        <p class="project-description">
+                            • Utilized PyTorch to design and fine-tune CNN that processes speech data and outputs user language 
+                            <br><br>
+                            • Converted audio files to a Mel Spectrogram and utilized librosa to run it through the CNN for image 
+                            analysis
+                            <br><br>
+                            • Presented at the UCSD ACM Winter 2024 showcase
+                        </p>
+                    </div>
+                    <img width="40%" src="images\acm_project.jpg">
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="project-card">
+                    <div class="project-text">
+                        <h2 class="project-title">Public Transport Geospatial Analysis: Rail & Road</h2>
+                        <div class="project-subtitle"> <u>UCSD Data Science Student Society (DS3)</u> </div>
+                        <p class="project-description">
+                            • Created EDA visualizations of the discrepancy between transportation systems and their CO2 emissions
+                            <br><br>
+                            • Used permutation testing to find that countries with more road than rail ridership had a 700% increase
+                            <br><br>
+                            • Presented at the UCSD Data Science Society conference
+                        </p>
+                    </div>
+                    <img width="40%" src="images\acm_project.jpg">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<hr class="section-divider">
+
+
 <!--Contact Section-->
 <section class ="contact" id="contact-section">
     <h2 class="contact-title">Contact Me!</h2><br>
@@ -170,7 +239,7 @@
                 <span class="second-color">email = </span>
                 <span class="first-color">new</span>
                 <span class="second-color">Email(</span><span class="fourth-color">"</span> 
-                <span ><a href="mailto:everest_yang@brown.edu" class="fourth-color">everest_yang@brown.edu</a></span>
+                <a href="mailto:everest_yang@brown.edu" class="fourth-color">everest_yang@brown.edu</a>
                 <span class="fourth-color">"</span><span class="second-color">)</span><span class="second-color">;</span>
                 <br>
                 <span class="third-color">String[]</span>
@@ -182,11 +251,11 @@
                 <ul>
                 <span class="fourth-color">"</span>
                 <a href="https://www.linkedin.com/in/everestyang/" class= "fourth-color" target="_blank">LinkedIn</a>
-                <span class="fourth-color">"</span><span class="second-color">,</span>
+                <span class="fourth-color">: Everest Yang "</span><span class="second-color">,</span>
                 <br>
                 <span class="fourth-color">"</span>
                 <a href="https://github.com/everestyang1" class= "fourth-color" target="_blank">Github</a> 
-                <span class="fourth-color">"</span><span class="second-color">,</span>
+                <span class="fourth-color">: everestyang1 "</span>
                 <br>
                 </ul>
                 <span class="second-color">}</span>
@@ -223,10 +292,11 @@
     <p>
         &copy; 2024 Everest Yang. All rights reserved.
         Made with <span class="heart">❤</span> using 
-        HTML, CSS, JS
+        HTML, CSS, JS from scratch!
     </p>
 </footer>
 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

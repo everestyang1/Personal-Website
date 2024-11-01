@@ -195,7 +195,6 @@ section#contact {
     background-color: #fff; 
     padding: 10px 10px;
     margin-top: 0px;
-    /* padding-bottom: 40px; */
 }
 
 .about-container {
@@ -239,7 +238,7 @@ section#contact {
 }
 
 .main-photo {
-    max-width: 85%;
+    max-width: 75%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -411,6 +410,123 @@ section#contact {
     transform: translateX(5px);
 }
 
+.projects {
+    padding-top: 2rem;
+    background: white;
+    width: 100%;
+    padding-bottom: 7.5rem;
+    position: relative;
+}
+
+.project-main {
+    width: 1500px;
+    max-width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.project-main h1 {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 44px;
+}
+
+.project-card {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1130px;
+    max-width: 80%;
+    padding-bottom: 55px;
+    text-align: left;
+}
+
+.project-text {
+    align-content: center;
+    display: grid;
+    padding-right: 32px;
+    width: 40%;
+}
+
+.project-title {
+    text-align: center;
+    color: black;
+    font-size: 23px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.project-subtitle {
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.project-description {
+    color: black;
+    text-align: left;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.project-button {
+    text-align: center;
+    text-decoration: none;
+    color: rgba(139, 69, 19, 0.9);
+    border: 1px solid rgba(139, 69, 19, 0.9);
+    padding: 10px;
+    border-radius: 0.5rem;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.project-button:hover {
+    color: rgba(139, 69, 19, 0.9);
+    background: white;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    border: 2px solid rgba(139, 69, 19, 0.9);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-10%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(225, 198, 179, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(139, 69, 19, 0.9);
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px;
+}
+
+
 .contact {
 	background-color: white;
 	padding: 50px;
@@ -437,6 +553,14 @@ section#contact {
 	font-family: Monaco,monospace;
 	border-radius: 4px;
 	background-color: #2a2d34;
+    position: relative;
+    z-index: 10;
+    
+}
+
+#console a {
+    cursor: pointer;
+    pointer-events: auto;
 }
 
 ul { 

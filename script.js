@@ -44,3 +44,14 @@ window.addEventListener('load', () => {
         }, 4000);
     });
 });
+
+
+const swiper = new Swiper('.project-main', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
