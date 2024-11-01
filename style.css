@@ -280,6 +280,7 @@ section#contact {
 .experience-container {
     max-width: 1400px;
     margin: 0 auto;
+    margin-top: -20px;
     padding: 40px;
 }
 
@@ -429,6 +430,7 @@ section#contact {
     color: black;
     font-weight: bold;
     text-align: center;
+    margin-top: 20px;
     padding-bottom: 50px;
     font-size: 44px;
 }
@@ -440,14 +442,14 @@ section#contact {
     justify-content: space-around;
     width: 1130px;
     max-width: 80%;
-    padding-bottom: 55px;
+    padding-bottom: 35px;
     text-align: left;
 }
 
 .project-text {
     align-content: center;
     display: grid;
-    padding-right: 32px;
+    padding-right: 12px;
     width: 40%;
 }
 
@@ -470,8 +472,9 @@ section#contact {
 .project-description {
     color: black;
     text-align: left;
-    font-size: 14px;
+    font-size: 14.5px;
     width: 100%;
+    text-align: center;
     margin-bottom: 25px;
     display: inline-block;
 }
@@ -526,6 +529,12 @@ section#contact {
     font-size: 20px;
 }
 
+.blog-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
 
 .contact {
 	background-color: white;
@@ -537,7 +546,7 @@ section#contact {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 25px;
-    transform: translateX(-10px);
+    margin-top: 10px;
 }
 
 #console {
