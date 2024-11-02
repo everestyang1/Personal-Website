@@ -412,10 +412,8 @@ section#contact {
 }
 
 .projects {
-    padding-top: 2rem;
     background: white;
     width: 100%;
-    padding-bottom: 7.5rem;
     position: relative;
 }
 
@@ -431,8 +429,17 @@ section#contact {
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     font-size: 44px;
+}
+
+.projects-overview {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 60px;
+    font-size: 18px;
+    line-height: 1.75;
 }
 
 .project-card {
@@ -449,7 +456,6 @@ section#contact {
 .project-text {
     align-content: center;
     display: grid;
-    padding-right: 12px;
     width: 40%;
 }
 
@@ -471,7 +477,6 @@ section#contact {
 
 .project-description {
     color: black;
-    text-align: left;
     font-size: 14.5px;
     width: 100%;
     text-align: center;
@@ -533,8 +538,17 @@ section#contact {
     text-align: center;
     font-size: 2.5rem;
     margin-top: 20px;
-    margin-bottom: 40px;
 }
+
+.blog-overview {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 60px;
+    font-size: 18px;
+    line-height: 1.75;
+}
+
 
 .contact {
 	background-color: white;
