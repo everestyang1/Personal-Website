@@ -512,6 +512,17 @@ section#contact {
     background: white;
 }
 
+.project-image {
+    width: 35%;
+    border: 3px solid black;
+    max-width: 600px;
+}
+
+.bigger-project-image {
+    width: 35%;
+    border: 3px solid black;
+    max-width: 600px;
+}
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -1007,8 +1018,16 @@ footer {
         margin-bottom: 20px;
     }
 
-    .project-image-mobile{
-        width:100%
+    .project-image{
+        width: 85%;
+        margin: 20px auto;
+        display: block;
+    }
+    
+    .bigger-project-image{
+        width: 100%;
+        margin: 20px auto;
+        display: block;
     }
 
     .swiper-button-next,
