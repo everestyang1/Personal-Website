@@ -678,8 +678,15 @@ footer {
 /* For mobile devices */
 @media (max-width: 768px) {
 
+
+    .logo {
+        margin-top:5px;
+    }
+
     .logo a {
-        display: none;
+        margin-right: 240px;
+        margin-left: -60px;
+        font-size: 16px;
     }
 
     .navbar {
@@ -697,8 +704,8 @@ footer {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 70%;
-        height: 100vh;
+        width: 45%;
+        height: 80vh;
         background-color: rgba(181, 149, 119, 0.98);
         flex-direction: column;
         align-items: center;
@@ -720,6 +727,10 @@ footer {
         transform: translateX(50px);
         will-change: transform, opacity;
     }
+    
+    .nav-links li a {
+        margin-left: -20px;
+    }
 
     .nav-links.active li {
         opacity: 1;
@@ -735,7 +746,7 @@ footer {
         padding: 10px;
         z-index: 1001;
         position: absolute;
-        top: -2px;
+        top: -3.5px;
         right: 20px;
     }
 
@@ -811,6 +822,12 @@ footer {
     .hero-button {
         padding: 12px 28px;
         font-size: 16px;
+    }
+
+    .rotating-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .about-content {
