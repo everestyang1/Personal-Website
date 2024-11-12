@@ -519,7 +519,7 @@ section#contact {
 }
 
 .bigger-project-image {
-    width: 35%;
+    width: 45%;
     border: 3px solid black;
     max-width: 600px;
 }
@@ -973,8 +973,8 @@ footer {
     }
 
     .experience-row:nth-last-child(1) .experience-logo{
-        margin-top:-10px;
-        margin-left: 80px;
+        transform: none;
+        margin: auto;
     }
 
     .project-main {
