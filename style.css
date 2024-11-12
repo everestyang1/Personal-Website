@@ -678,14 +678,13 @@ footer {
 /* For mobile devices */
 @media (max-width: 768px) {
 
-
     .logo {
         margin-top:5px;
     }
 
     .logo a {
         margin-right: 240px;
-        margin-left: -60px;
+        margin-left: -20px;
         font-size: 16px;
     }
 
@@ -705,7 +704,7 @@ footer {
         top: 0;
         right: -100%;
         width: 45%;
-        height: 80vh;
+        height: 100vh;
         background-color: rgba(181, 149, 119, 0.98);
         flex-direction: column;
         align-items: center;
@@ -746,7 +745,7 @@ footer {
         padding: 10px;
         z-index: 1001;
         position: absolute;
-        top: -3.5px;
+        top: -6px;
         right: 20px;
     }
 
@@ -824,10 +823,12 @@ footer {
         font-size: 16px;
     }
 
-    .rotating-text {
+    .hero-subtitle {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        margin-top: 10px;
+        font-size: clamp(18px, 4vw, 24px);
     }
 
     .about-content {
