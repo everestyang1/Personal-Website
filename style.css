@@ -975,6 +975,7 @@ footer {
     .experience-row:nth-last-child(1) .experience-logo{
         transform: none;
         margin: auto;
+        margin-bottom: 20px;
     }
 
     .project-main {
