@@ -1023,7 +1023,7 @@ footer {
         margin: 20px auto;
         display: block;
     }
-    
+
     .bigger-project-image{
         width: 100%;
         margin: 20px auto;
@@ -1107,6 +1107,7 @@ footer {
     .hero {
         height: 120vh;
     }
+    
 
     .hero-title {
         font-size: 36px;
@@ -1116,12 +1117,21 @@ footer {
         font-size: 20px;
     }
 
+    .logo a {
+        margin-left: -130px;
+    }
+
     .nav-links {
         padding: 60px 0;
     }
 
     .nav-links li {
         margin: 15px 0;
+    }
+
+    .experience-row:nth-last-child(1) .experience-logo{
+        margin-top:-10px;
+        margin-left: 185px;
     }
 }
 
