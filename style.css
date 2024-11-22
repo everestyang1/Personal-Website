@@ -35,8 +35,8 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    max-width: 1000;
     margin: 0 auto;
+    height: 50px;
 }
 
 .logo a {
@@ -1102,6 +1102,7 @@ footer {
         padding: 1.5rem;
         font-size: 14px;
     }
+    
 }
 
 @media (max-height: 600px) and (orientation: landscape) {
@@ -1109,7 +1110,6 @@ footer {
         height: 120vh;
     }
     
-
     .hero-title {
         font-size: 36px;
     }
