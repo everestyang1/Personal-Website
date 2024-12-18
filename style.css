@@ -391,7 +391,7 @@ section#contact {
 .experience-row:nth-last-child(5) .experience-logo {
     width: 150px;
     transform: translateX(-10px);
-    margin-bottom: -3px;
+    margin-bottom: -1px;
 }
 
 .experience-row:nth-last-child(4) .experience-logo {
@@ -991,6 +991,11 @@ footer {
         transform: none;
     }
 
+    .experience-row:nth-last-child(4) .experience-logo{
+        transform: none;
+        margin: auto;
+        margin-bottom: 20px;
+    }
     .experience-row:nth-last-child(1) .experience-logo{
         transform: none;
         margin: auto;
