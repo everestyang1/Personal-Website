@@ -388,6 +388,16 @@ section#contact {
     margin-bottom: 50px;
 }
 
+.experience-row:nth-last-child(5) .experience-logo {
+    width: 150px;
+    transform: translateX(-10px);
+    margin-bottom: -3px;
+}
+
+.experience-row:nth-last-child(4) .experience-logo {
+    width: 100px;
+    transform: translateX(-32px);
+}
 .experience-row:nth-last-child(2) .experience-logo {
     transform: translateX(-5px);
 }
@@ -398,6 +408,15 @@ section#contact {
 .experience-row:nth-last-child(2) .experience-location {
     transform: translateX(20px);
 }
+
+.experience-row:nth-last-child(5) .experience-date {
+    transform: translateX(-15px);
+}
+
+.experience-row:nth-last-child(4) .experience-date {
+    transform: translateX(-15px);
+}
+
 .experience-row:nth-last-child(2) .experience-date {
     transform: translateX(5px);
 }
