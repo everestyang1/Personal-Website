@@ -991,6 +991,12 @@ footer {
         transform: none;
     }
 
+    .experience-row:nth-last-child(5) .experience-date {
+        transform: none;
+    }
+    .experience-row:nth-last-child(4) .experience-date {
+        transform: none;
+    }
     .experience-row:nth-last-child(4) .experience-logo{
         transform: none;
         margin: auto;
