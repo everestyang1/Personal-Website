@@ -398,6 +398,9 @@ section#contact {
     width: 100px;
     transform: translateX(-32px);
 }
+.experience-row:nth-last-child(3) .experience-logo {
+    margin-top: 20px;
+}
 .experience-row:nth-last-child(2) .experience-logo {
     transform: translateX(-5px);
 }
