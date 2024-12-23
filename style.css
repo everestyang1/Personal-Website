@@ -1161,11 +1161,13 @@ footer {
     }
 
     .logo {
-        margin-right: 150px;
-    }
+        position: absolute;
+        left: 3vw;
+      }
 
     .logo a{
-        margin-right: 150px;
+        position: absolute;
+        left: 3vw;
     }
 
     .nav-links {
