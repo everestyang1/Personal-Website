@@ -1202,17 +1202,15 @@ footer {
         width: 75%;
         height: 75%;
     }
+    
     .project-button {
         transform: scale(0.8);
     }
 
     #console {
-        transform: scale(0.6);
-        transform-origin: left top;
-    }
-
-    #console * {
-        font-size: 60%;
+        transform: scale(0.8);
+        margin: 0 auto;
+        
     }
 
 }
