@@ -412,10 +412,7 @@ section#contact {
     transform: translateX(20px);
 }
 
-.experience-row:nth-last-child(5) .experience-date {
-    transform: translateX(-15px);
-}
-
+.experience-row:nth-last-child(5) .experience-date,
 .experience-row:nth-last-child(4) .experience-date {
     transform: translateX(-15px);
 }
@@ -953,11 +950,17 @@ footer {
         margin: 0 auto 20px;
     }
 
-    .experience-date,
     .experience-location {
         margin-right: 0;
         font-size: 16px;
         text-align:center;
+    }
+
+    .experience-date{
+        margin-right: 0;
+        font-size: 16px;
+        text-align:center;
+        margin-bottom: 0px;
     }
 
     .experience-job-title {
@@ -984,21 +987,20 @@ footer {
     
     .experience-row:nth-last-child(2) .experience-job-title,
     .experience-row:nth-last-child(2) .experience-location,
-    .experience-row:nth-last-child(2) .experience-date {
+    .experience-row:nth-last-child(1) .experience-job-title,
+    .experience-row:nth-last-child(1) .experience-location {
         transform: none;
     }
     
-    .experience-row:nth-last-child(1) .experience-job-title,
-    .experience-row:nth-last-child(1) .experience-location,
+    .experience-row:nth-last-child(5) .experience-date,
+    .experience-row:nth-last-child(4) .experience-date,
+    .experience-row:nth-last-child(2) .experience-date,
     .experience-row:nth-last-child(1) .experience-date {
         transform: none;
+        margin-bottom: 0px;
     }
-
-    .experience-row:nth-last-child(5) .experience-date,
+    
     .experience-row:nth-last-child(5) .experience-logo {
-        transform: none;
-    }
-    .experience-row:nth-last-child(4) .experience-date {
         transform: none;
     }
     .experience-row:nth-last-child(4) .experience-logo{
@@ -1139,7 +1141,7 @@ footer {
     
 }
 
-@media (max-height: 600px) and (orientation: landscape) {
+@media only screen and (max-device-width: 926px) and (orientation: landscape) {
     .hero {
         height: 120vh;
     }
@@ -1153,7 +1155,7 @@ footer {
     }
 
     .logo a{
-        margin-left: -190px;
+        margin-right: 70px;
     }
 
     .nav-links {
@@ -1172,26 +1174,26 @@ footer {
     .about-description,
     .experience-description,
     .projects-overview,
+    .project-description
     .blog-overview{
         font-size: 9.5px;
     }
     
     .experience-company{
-        margin-top: -20px;
+        margin-bottom: -10px;
     }
 
     .project-image{
-        width: 40%;
-        height: 40%;
+        width: 45%;
+        height: 45%;
     }
+
     .bigger-project-image{
-        width: 70%;
-        height: 70%;
+        width: 75%;
+        height: 75%;
     }
-    
-    #console{
-        width: 80%;
-        height: 80%;
+    .project-button {
+        transform: scale(0.8);
     }
 
 }
