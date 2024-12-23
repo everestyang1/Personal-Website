@@ -994,7 +994,8 @@ footer {
         transform: none;
     }
 
-    .experience-row:nth-last-child(5) .experience-date {
+    .experience-row:nth-last-child(5) .experience-date,
+    .experience-row:nth-last-child(5) .experience-logo {
         transform: none;
     }
     .experience-row:nth-last-child(4) .experience-date {
@@ -1152,7 +1153,7 @@ footer {
     }
 
     .logo a {
-        margin-left: -130px;
+        margin-left: -150px;
     }
 
     .nav-links {
@@ -1162,10 +1163,11 @@ footer {
     .nav-links li {
         margin: 15px 0;
     }
-
-    .experience-row:nth-last-child(1) .experience-logo{
-        margin-top:-10px;
-        margin-left: 185px;
+    .about-description {
+        font-size: 14px;
+    }
+    .experience-description {
+        font-size: 13px;
     }
 }
 
