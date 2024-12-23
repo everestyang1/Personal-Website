@@ -723,18 +723,16 @@ footer {
     }
 
     .logo a {
-        margin-right: 240px;
-        margin-left: -20px;
+        left: 4vw;
         font-size: 16px;
     }
 
     .navbar {
-        flex-direction: column;
+        /* flex-direction: column; */
         padding: 5px;
         position: relative;
         transform: translateZ(0);
         -webkit-transform: translateZ(0);
-        background-color: rgba(181, 149, 119, 0.98);
         width: 100%;
         height: 37px;
     }
