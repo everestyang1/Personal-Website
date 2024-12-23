@@ -1153,7 +1153,7 @@ footer {
     }
 
     .logo a {
-        margin-left: -150px;
+        margin-left: -170px;
     }
 
     .nav-links {
@@ -1163,12 +1163,25 @@ footer {
     .nav-links li {
         margin: 15px 0;
     }
-    .about-description {
-        font-size: 14px;
+
+    .about-description{
+        font-size: 7px;
     }
-    .experience-description {
-        font-size: 13px;
+    .main-photo{
+        width: 60%;
+        height: 60%;
     }
+    .experience-description{
+        font-size: 7px;
+    }
+    .project-overview{
+        font-size: 7px;
+    }
+    .blog-overview{
+        font-size: 7px;
+    }
+    
+
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
