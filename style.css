@@ -1152,8 +1152,8 @@ footer {
         font-size: 20px;
     }
 
-    .logo a {
-        margin-left: -170px;
+    .logo {
+        margin-left: -130px;
     }
 
     .nav-links {
@@ -1164,24 +1164,28 @@ footer {
         margin: 15px 0;
     }
 
-    .about-description{
-        font-size: 7px;
-    }
     .main-photo{
+        width: 40%;
+        height: 40%;
+    }
+
+    .about-description,
+    .experience-description,
+    .projects-overview,
+    .blog-overview{
+        font-size: 11px;
+    }
+    
+    .project-image,
+    .bigger-project-image{
         width: 60%;
         height: 60%;
     }
-    .experience-description{
-        font-size: 7px;
-    }
-    .project-overview{
-        font-size: 7px;
-    }
-    .blog-overview{
-        font-size: 7px;
-    }
     
-
+    #console{
+        width: 40%;
+        height: 40%;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
