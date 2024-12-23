@@ -966,7 +966,7 @@ footer {
 
     .experience-company {
         font-size: 22px;
-        
+        margin-top: -10px;
     }
 
     .experience-description {
@@ -1176,6 +1176,10 @@ footer {
         font-size: 11px;
     }
     
+    .experience-company{
+        margin-top: -10px;
+    }
+
     .project-image,
     .bigger-project-image{
         width: 60%;
@@ -1186,6 +1190,7 @@ footer {
         width: 40%;
         height: 40%;
     }
+
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
