@@ -718,7 +718,7 @@ footer {
 @media (max-width: 768px) {
 
     .logo {
-        margin-top:5px;
+        margin-top:3px;
     }
 
     .logo a {
@@ -727,7 +727,6 @@ footer {
     }
 
     .navbar {
-        /* flex-direction: column; */
         padding: 5px;
         position: relative;
         transform: translateZ(0);
@@ -1158,7 +1157,7 @@ footer {
     }
 
     .logo {
-        margin-top:5px;
+        margin-top:3px;
     }
 
     .logo a {
@@ -1167,7 +1166,6 @@ footer {
     }
 
     .navbar {
-        /* flex-direction: column; */
         padding: 5px;
         position: relative;
         transform: translateZ(0);
