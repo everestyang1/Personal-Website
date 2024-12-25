@@ -1239,6 +1239,11 @@ footer {
 }
 
 @media only screen and (max-device-width: 926px) and (orientation: landscape) {
+
+    body {
+        padding: 0 5%;
+    }
+
     .hero {
         height: 120vh;
     }
