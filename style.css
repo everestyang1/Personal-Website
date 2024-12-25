@@ -1241,7 +1241,7 @@ footer {
 @media only screen and (max-device-width: 926px) and (orientation: landscape) {
 
     body {
-        padding: 0 5%;
+        padding: 0 7%;
     }
 
     .hero {
@@ -1291,9 +1291,15 @@ footer {
     .about-description,
     .experience-description,
     .projects-overview,
-    .project-description,
-    .blog-overview{
+    .project-description{
         font-size: 9.5px;
+    }
+
+    .blog-overview{
+        padding: 0 7%;
+        width: 90%;
+        font-size: 9.5px;
+
     }
     
     .experience-company{
@@ -1320,7 +1326,7 @@ footer {
     }
     
     .blog-image {
-        height: 180px;
+        height: 200px;
     }
     
     .blog-title {
