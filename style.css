@@ -1289,7 +1289,6 @@ footer {
     .projects-overview,
     .project-description,
     .blog-overview{
-        width: 90%;
         font-size: 9.5px;
     }
     
@@ -1317,7 +1316,7 @@ footer {
     }
     
     .blog-image {
-        height: 230px;
+        height: 260px;
     }
     
     .blog-title {
