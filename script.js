@@ -20,7 +20,7 @@ function typeWriter(text, element, speed, callback) {
 const titles = [
     "Computer Science @ Brown University",
     "Previous SWE Intern @ NASA",
-    "Aspiring Software Engineer/Entrepreneur"
+    "Aspiring Research Scientist/Entrepreneur"
 ];
 
 let currentIndex = 0;
@@ -45,19 +45,53 @@ window.addEventListener('load', () => {
     });
 });
 
-const swiper = new Swiper('.project-main', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: true
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.project-main', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2100,
+            disableOnInteraction: true
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    const blogSlides = document.querySelectorAll('.blog-main .swiper-slide');
+    const lastSlideIndex = Math.max(blogSlides.length - 1, 0);
+
+    const blogSwiper = new Swiper('.blog-main', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        initialSlide: lastSlideIndex,
+        autoplay: false,
+        navigation: {
+            nextEl: '.blog .swiper-button-next',
+            prevEl: '.blog .swiper-button-prev',
+        },
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                blogSwiper.autoplay.start();
+                blogSwiper.params.autoplay.delay = 2500;
+                blogSwiper.params.autoplay.disableOnInteraction = true;
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.15 });
+
+    const blogSection = document.querySelector('#blog');
+    if (blogSection) {
+        observer.observe(blogSection);
+    }
 });
+
 
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');

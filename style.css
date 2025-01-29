@@ -656,6 +656,52 @@ section#contact {
     text-decoration: none;
     font-weight: bold;
 }
+
+.blog-main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.blog-main .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-main .swiper-button-next,
+.blog-main .swiper-button-prev {
+    border: 2px solid rgba(139, 69, 19, 0.9);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(225, 198, 179, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(139, 69, 19, 0.9);
+}
+
+.blog-main .swiper-button-prev {
+    left: 0;
+}
+
+.blog-main .swiper-button-next {
+    right: 0;
+}
+
+.blog-main .swiper-button-next::after,
+.blog-main .swiper-button-prev::after {
+    font-size: 20px;
+}
   
 .view-post:hover {
     text-decoration: underline;
@@ -1155,7 +1201,7 @@ footer {
     }
     
     .blog-image {
-        height: 200px;
+        height: 80%;
     }
     
     .blog-details {
@@ -1177,6 +1223,20 @@ footer {
     
     .blog-stats {
         font-size: 0.8em;
+    }
+    .blog-main {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .blog-card {
+        width: 85%;
+        margin: 15px auto;
+    }
+    
+    .blog-main .swiper-button-next,
+    .blog-main .swiper-button-prev {
+        display: none;
     }
 
     .contact {
@@ -1316,7 +1376,7 @@ footer {
     }
     
     .blog-image {
-        height: 260px;
+        height: 80%px;
     }
     
     .blog-title {
@@ -1327,6 +1387,20 @@ footer {
     .blog-description,
     .blog-stats {
         font-size: 0.8em;
+    }
+
+    .blog-main {
+        width: 100%;
+    }
+
+    .blog-card {
+        width: 60%;
+        margin: 15px auto;
+    }
+    
+    .blog-main .swiper-button-next,
+    .blog-main .swiper-button-prev {
+        display: none;
     }
 
     #console {
