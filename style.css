@@ -393,23 +393,31 @@ section#contact {
     margin-bottom: 50px;
 }
 
+
+.experience-row:nth-last-child(6) .experience-logo {
+    margin-right: 20px;
+    width: 105px;
+}
 .experience-row:nth-last-child(5) .experience-logo {
     width: 150px;
     transform: translateX(-10px);
     margin-bottom: -1px;
 }
-
 .experience-row:nth-last-child(4) .experience-logo {
     width: 100px;
     transform: translateX(-32px);
+    margin-top: 40px;
 }
+
 .experience-row:nth-last-child(3) .experience-logo {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 .experience-row:nth-last-child(2) .experience-logo {
     transform: translateX(-5px);
 }
-
+.experience-row:nth-last-child(6) .experience-job-title {
+    transform: translateX(40px);
+}
 .experience-row:nth-last-child(2) .experience-job-title {
     transform: translateX(15px);
 }
@@ -1097,7 +1105,8 @@ footer {
     .experience-row:nth-last-child(2) .experience-company{
         margin-top:-20px;
     }
-    
+
+    .experience-row:nth-last-child(6) .experience-job-title,
     .experience-row:nth-last-child(2) .experience-job-title,
     .experience-row:nth-last-child(2) .experience-location,
     .experience-row:nth-last-child(1) .experience-job-title,
@@ -1116,6 +1125,7 @@ footer {
     .experience-row:nth-last-child(5) .experience-logo {
         transform: none;
     }
+    .experience-row:nth-last-child(6) .experience-logo,
     .experience-row:nth-last-child(4) .experience-logo{
         transform: none;
         margin: auto;
