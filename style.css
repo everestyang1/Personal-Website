@@ -416,7 +416,7 @@ section#contact {
     transform: translateX(-5px);
 }
 .experience-row:nth-last-child(6) .experience-job-title {
-    transform: translateX(40px);
+    transform: translateX(8px);
 }
 .experience-row:nth-last-child(2) .experience-job-title {
     transform: translateX(15px);

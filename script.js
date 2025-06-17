@@ -19,7 +19,7 @@ function typeWriter(text, element, speed, callback) {
 }
 const titles = [
     "Computer Science @ Brown University",
-    "Previous SWE Intern @ NASA",
+    "Previously @ AWS, NASA",
     "Aspiring Research Scientist/Entrepreneur"
 ];
 
