@@ -97,7 +97,6 @@ img {
 .navbar-right {
     margin-left: 2rem;
     padding-left: 2rem;
-    border-left: 1px solid var(--border-color);
 }
 
 .navbar a {
@@ -518,23 +517,57 @@ img {
     border-radius: 2px;
 }
 
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.project-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 2rem 0;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.project-carousel:active {
+    cursor: grabbing;
+}
+
+.project-track {
+    display: flex;
     gap: 2rem;
+    animation: scroll 60s linear infinite;
+    width: calc(11 * (350px + 2rem));
+    cursor: grab;
+    will-change: transform;
+}
+
+.project-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-8 * (350px + 2rem)));
+    }
 }
 
 .project {
     background: white;
     border-radius: 20px;
-    padding: 2rem;
+    padding: 1.25rem;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 0.75rem;
+    width: 350px;
+    flex-shrink: 0;
 }
 
 .project:hover {
@@ -565,7 +598,7 @@ img {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin-top: 0.5rem;
+    margin-top: 0;
 }
 
 .project-link {
@@ -742,8 +775,8 @@ img {
         padding: 0 1rem;
     }
 
-    .project-grid {
-        grid-template-columns: 1fr;
+    .project-carousel {
+        margin: 1rem 0;
     }
 }
 
@@ -1151,8 +1184,8 @@ img {
 
 /* Responsive Design for Projects Section */
 @media (max-width: 992px) {
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .project-carousel {
+        margin: 1rem 0;
     }
 }
 
@@ -1241,7 +1274,7 @@ img {
 
 /* Common content spacing */
 .timeline,
-.project-grid,
+.project-carousel,
 .about,
 .vidtext {
     margin-top: 1rem;

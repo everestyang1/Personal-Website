@@ -90,7 +90,7 @@
 
         const titles = [
             "CS & ML, Robotics, Venture @ Brown University",
-            "Previous Internships @ AWS, NASA",
+            "Previous Internships @ Amazon (AWS), NASA",
             "Research @ Brown Robotics, Columbia Med, UCSD",
             "Aspiring Research Scientist/Entrepreneur"
         ];
@@ -370,58 +370,110 @@
     <section class="project-content" id="projects">
         <div class="container">
             <h3 class="title">Featured Projects</h3>
-            <div class="project-grid">
-                <div class="project">
-                    <i class="fas fa-satellite"></i>
-                    <h4>Perovskite Visuals and Degradation eXperiment</h4>
-                    <p>Building Embedded Operating System in C for PVDX, Brown's 3U-CubeSat under NASA ELaNa program, designed to test next-gen perovskite solar cells in harsh orbital environments</p>
-                    <div class="project-links">
-                        <a href="https://www.brownspace.io/subgroup.html" class="project-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                            BSE Website
-                        </a>
+            <div class="project-carousel">
+                <div class="project-track">
+                    <div class="project">
+                        <i class="fas fa-satellite"></i>
+                        <h4>Perovskite Visuals and Degradation eXperiment</h4>
+                        <p>Building Embedded Operating System in C for PVDX, Brown's 3U-CubeSat under NASA ELaNa program, designed to test next-gen perovskite solar cells in harsh orbital environments</p>
+                        <div class="project-links">
+                            <a href="https://www.brownspace.io/subgroup.html" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                BSE Website
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <i class="fas fa-eye"></i>
+                        <h4>Evaluating Fourier Transform Features for Detection of AI-Generated Images</h4>
+                        <p>Developed TensorFlow CNN architectures incorporating Fourier Transform features to enhance detection of AI-generated images</p>
+                        <div class="project-links">
+                            <a href="https://drive.google.com/file/d/1rky1z-SoMdCCl633_1pJmZUYpnRtNixI/view?usp=sharing" class="project-link" target="_blank">
+                                <i class="fas fa-file-alt"></i>
+                                IEEE ICAD Publication
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <i class="fas fa-database"></i>
+                        <h4>Multi-Threaded Database Server</h4>
+                        <p>Created a multi-threaded server in C using TCP to manage concurrent client connections and facilitate interaction with a shared key-value database</p>
+                    </div>
+                    <div class="project">
+                        <i class="fas fa-microphone"></i>
+                        <h4>Audio ML Language Classifier</h4>
+                        <p>Utilized PyTorch to design and fine-tune CNN that processes speech data and outputs user language. Converted audio files to a Mel Spectrogram and utilized librosa to run it through the CNN for image analysis</p>
+                    </div>
+                    <div class="project">
+                        <i class="fas fa-bus"></i>
+                        <h4>Public Transport Geospatial Analysis</h4>
+                        <p>Created EDA visualizations of the discrepancy between transportation systems and their CO2 emissions using Python and Data Science techniques</p>
+                        <div class="project-links">
+                            <a href="https://drive.google.com/file/d/1JL7y0esIh6rpeKhrRazq_jtThb2OV52y/view?usp=sharing" class="project-link" target="_blank">
+                                <i class="fas fa-file-alt"></i>
+                                Project Poster
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <i class="fas fa-terminal"></i>
+                        <h4>Shell</h4>
+                        <p>Built a Bash-like shell in C with job control, enabling foreground and background process management with signal handling</p>
+                    </div>
+                    <div class="project">
+                        <i class="fas fa-globe"></i>
+                        <h4>Everest Yang's Personal Website</h4>
+                        <p>Developed my Personal Portfolio Website from scratch using HTML, CSS, and JavaScript. TBH, I'm not the biggest fan of WebDev but I made this website for fun ;).</p>
+                        <div class="project-links">
+                            <a href="https://everestyang1.github.io/" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                My Website!
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <i class="fas fa-users"></i>
+                        <h4>Lexington Youth STEM Team</h4>
+                        <p>Co-founder of voluntary HS group that created coding projects for local nonprofits during COVID-19. Built website for Harrington Elementary School, data science for town government's financial grants, virtual Patriots' Day event, etc.</p>
+                        <div class="project-links">
+                            <a href="https://lexyouthstem.org/" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                LYST Website
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Duplicate first 3 projects for seamless loop -->
+                    <div class="project">
+                        <i class="fas fa-satellite"></i>
+                        <h4>Perovskite Visuals and Degradation eXperiment</h4>
+                        <p>Building Embedded Operating System in C for PVDX, Brown's 3U-CubeSat under NASA ELaNa program, designed to test next-gen perovskite solar cells in harsh orbital environments</p>
+                        <div class="project-links">
+                            <a href="https://www.brownspace.io/subgroup.html" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                BSE Website
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <i class="fas fa-eye"></i>
+                        <h4>Evaluating Fourier Transform Features for Detection of AI-Generated Images</h4>
+                        <p>Developed and tested TensorFlow CNN architectures incorporating Fourier Transform features to enhance detection of AI-generated images</p>
+                        <div class="project-links">
+                            <a href="https://drive.google.com/file/d/1rky1z-SoMdCCl633_1pJmZUYpnRtNixI/view?usp=sharing" class="project-link" target="_blank">
+                                <i class="fas fa-file-alt"></i>
+                                IEEE ICAD Publication
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <i class="fas fa-database"></i>
+                        <h4>Multi-Threaded Database Server</h4>
+                        <p>Created a multi-threaded server in C using TCP to manage concurrent client connections and facilitate interaction with a shared key-value database</p>
                     </div>
                 </div>
-                <div class="project">
-                    <i class="fas fa-eye"></i>
-                    <h4>Evaluating Fourier Transform Features for Detection of AI-Generated Images</h4>
-                    <p>Developed and tested TensorFlow CNN architectures incorporating Fourier Transform features to enhance detection of AI-generated images, achieving a baseline testing accuracy of 98.58%</p>
-                    <div class="project-links">
-                        <a href="https://drive.google.com/file/d/1rky1z-SoMdCCl633_1pJmZUYpnRtNixI/view?usp=sharing" class="project-link" target="_blank">
-                            <i class="fas fa-file-alt"></i>
-                            IEEE ICAD Publication
-                        </a>
-                    </div>
-                </div>
-                <div class="project">
-                    <i class="fas fa-database"></i>
-                    <h4>Multi-Threaded Database Server</h4>
-                    <p>Created a multi-threaded server in C using TCP to manage concurrent client connections and facilitate interaction with a shared key-value database</p>
-                </div>
-                <div class="project">
-                    <i class="fas fa-microphone"></i>
-                    <h4>Audio ML Language Classifier</h4>
-                    <p>Utilized PyTorch to design and fine-tune CNN that processes speech data and outputs user language. Converted audio files to a Mel Spectrogram and utilized librosa to run it through the CNN for image analysis</p>
-            </div>
-                <div class="project">
-                    <i class="fas fa-bus"></i>
-                    <h4>Public Transport Geospatial Analysis</h4>
-                    <p>Created EDA visualizations of the discrepancy between transportation systems and their CO2 emissions using Python and Data Science techniques</p>
-                    <div class="project-links">
-                        <a href="https://drive.google.com/file/d/1JL7y0esIh6rpeKhrRazq_jtThb2OV52y/view?usp=sharing" class="project-link" target="_blank">
-                            <i class="fas fa-file-alt"></i>
-                            Project Poster
-                        </a>
-                    </div>
-                </div>
-                <div class="project">
-                    <i class="fas fa-terminal"></i>
-                    <h4>Shell</h4>
-                    <p>Built a Bash-like shell in C with job control, enabling foreground and background process management with signal handling</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     <!-------------------------- Blog Section -------------------------->
     <section class="animations-area" id="blog">
         <div class="container">
@@ -646,7 +698,92 @@
 
         // Initialize particle system
         const particleSystem = new ParticleSystem();
+        
+        // Project Carousel Drag Functionality
+        function initCarouselDrag() {
+            const carousel = document.querySelector('.project-carousel');
+            const track = document.querySelector('.project-track');
+            
+            if (!carousel || !track) {
+                console.log('Carousel elements not found');
+                return;
+            }
 
+            let isDragging = false;
+            let startPos = 0;
+            let currentTranslate = 0;
+            let prevTranslate = 0;
+            let animationId = null;
+
+            // Mouse events
+            carousel.addEventListener('mousedown', dragStart);
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('mouseup', dragEnd);
+
+            // Touch events for mobile
+            carousel.addEventListener('touchstart', dragStart, { passive: false });
+            document.addEventListener('touchmove', drag, { passive: false });
+            document.addEventListener('touchend', dragEnd);
+
+            function dragStart(event) {
+                isDragging = true;
+                startPos = getPositionX(event);
+                carousel.style.cursor = 'grabbing';
+                
+                // Pause the animation
+                track.style.animationPlayState = 'paused';
+                
+                // Prevent text selection
+                event.preventDefault();
+            }
+
+            function drag(event) {
+                if (!isDragging) return;
+                
+                event.preventDefault();
+                const currentPosition = getPositionX(event);
+                const diff = currentPosition - startPos;
+                currentTranslate = prevTranslate + diff;
+                
+                // Limit the drag range
+                const maxTranslate = 0;
+                const minTranslate = -(8 * (350 + 32)); // 8 projects * (width + gap)
+                currentTranslate = Math.max(minTranslate, Math.min(maxTranslate, currentTranslate));
+                
+                // Apply the transform
+                track.style.transform = `translateX(${currentTranslate}px)`;
+            }
+
+            function dragEnd() {
+                isDragging = false;
+                prevTranslate = currentTranslate;
+                carousel.style.cursor = 'grab';
+                
+                // Resume the animation
+                track.style.animationPlayState = 'running';
+            }
+
+            function getPositionX(event) {
+                return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+            }
+
+            console.log('Carousel drag functionality initialized');
+        }
+
+        // Initialize carousel drag functionality
+        initCarouselDrag();
+        
+        // Test if carousel elements exist
+        setTimeout(() => {
+            const carousel = document.querySelector('.project-carousel');
+            const track = document.querySelector('.project-track');
+            if (carousel && track) {
+                console.log('Carousel elements found and drag functionality should be working');
+            } else {
+                console.log('Carousel elements not found');
+            }
+        }, 1000);
+        
         // Existing gradient background interaction
         document.addEventListener('mousemove', (e) => {
             const gradient = document.querySelector('.gradient-bg');
