@@ -1059,7 +1059,7 @@ img {
 }
 
 .animations-title h4 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     color: var(--text-color);
     font-weight: 700;
     position: relative;
@@ -1117,7 +1117,7 @@ img {
 }
 
 .description h4 {
-    font-size: 1.75rem;
+    font-size: 1.875rem;
     color: var(--text-color);
     font-weight: 600;
 }
