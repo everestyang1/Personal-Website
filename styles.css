@@ -754,6 +754,10 @@ img {
     .contact-title h4 {
         font-size: 2rem;
     }
+
+    .timeline-item.expanded .timeline-description {
+        max-height: none;
+    }
 }
 
 /* Responsive Design */
