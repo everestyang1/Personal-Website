@@ -1377,8 +1377,8 @@ html {
 }
 
 .main-photo {
-    width: 300px;
-    height: 300px;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
