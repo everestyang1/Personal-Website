@@ -918,7 +918,7 @@ img {
     }
 
     .hero-subtitle {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         margin-bottom: 1.5rem;
     }
     
@@ -1382,6 +1382,7 @@ html {
     transition: transform 0.3s ease;
     margin-bottom: -4rem;
     margin-top: 2rem;
+    animation: float 6s ease-in-out infinite;
 }
 
 .main-photo:hover {
@@ -1459,7 +1460,7 @@ html {
     }
     
     .smaller-photos {
-        margin-top: 6rem;
+        margin-top: 3rem;
         max-width: 350px;
     }
     
