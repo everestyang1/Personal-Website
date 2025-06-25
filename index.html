@@ -19,7 +19,7 @@
         <div class="container">
             <div class="header">
                 <a href="#" class="logo">Everest Yang</a>
-        <nav class="navbar">
+                <nav class="navbar">
                     <div class="navbar-left">
                         <a href="#home">Home</a>
                         <a href="#about">About Me</a>
@@ -31,8 +31,13 @@
                 <div class="navbar-right">
                     <a href="#contact">Contact</a>
                 </div>
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            </div>
+        </div>
     </header>
 
     <script>
@@ -44,6 +49,29 @@
             } else {
                 header.classList.remove('scrolled');
             }
+        });
+
+        // Hamburger menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navbar = document.querySelector('.navbar');
+            const navbarRight = document.querySelector('.navbar-right');
+
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navbar.classList.toggle('active');
+                navbarRight.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.navbar a, .navbar-right a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navbar.classList.remove('active');
+                    navbarRight.classList.remove('active');
+                });
+            });
         });
     </script>
     <!-------------------------- Home Page -------------------------->
@@ -485,8 +513,8 @@
 
                     <div class="vidtext">
                         <div class="portfoliovid" style="display: flex; gap: 1rem; margin-top: 1rem;">
-                            <img src="images/NASA.webp" alt="NASA logo" style="width: 45%; height: 100%; object-fit: cover; border-radius: 12px;">
-                            <img src="images/jewl_lab.jpg" alt="NASA lab photo" style="width: 50%; height: 100%; object-fit: cover; border-radius: 12px; margin-top: 10px;">
+                            <img src="images/NASA.webp" alt="NASA logo" style="width: 35%; height: 100%; object-fit: cover; border-radius: 12px; margin-left: 12.5%;">
+                            <img src="images/jewl_lab.jpg" alt="NASA lab photo" style="width: 40%; height: 100%; object-fit: cover; border-radius: 12px; margin-top: 8px;">
                         </div>
                         <div class="description">
                             <h4>My Experience as a SWE Intern at NASA</h4>
