@@ -1469,6 +1469,7 @@ html {
 
 .animations-title {
     text-align: left;
+    margin-left: 4rem;
 }
 
 .animations-title h4 {
@@ -1479,6 +1480,7 @@ html {
     display: inline-block;
     padding-bottom: 0.75rem;
     margin-bottom: 1.5rem;
+    text-align: left;
 }
 
 .animations-title h4::after {
@@ -1486,8 +1488,8 @@ html {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 50px;
-    height: 3px;
+    width: 60px;
+    height: 4px;
     background: var(--primary-color);
     border-radius: 2px;
 }
@@ -1537,8 +1539,8 @@ html {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-height: 300px;
-    overflow: hidden;
+    max-height: 400px;
+    overflow: visible;
     padding-bottom: 1rem;
     padding-top: 1rem;
     padding-left: 0.5rem;
@@ -1707,8 +1709,8 @@ html {
 }
 
 .vidtext .description {
-    max-height: 300px;
-    overflow: hidden;
+    max-height: 400px;
+    overflow: visible;
 }
 
 /* Specific styling for the UCSD/Brown logo to ensure it displays well */
