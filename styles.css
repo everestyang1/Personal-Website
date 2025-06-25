@@ -42,6 +42,12 @@ img {
     height: auto;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
 /* Header Styles */
 .header-area {
     background: rgba(255, 255, 255, 0.95);
@@ -86,7 +92,6 @@ img {
     justify-content: center;
     align-items: center;
     gap: 1.7rem;
-    margin-left: 117px;
 }
 
 .navbar-left {
