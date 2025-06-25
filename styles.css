@@ -1454,11 +1454,16 @@ html {
     z-index: 1;
 }
 
-.animations {
+.animations-area .container {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
+    padding: 0 2rem;
+}
+
+.animations {
+    width: 100%;
 }
 
 .animations-content {
@@ -1469,7 +1474,6 @@ html {
 
 .animations-title {
     text-align: left;
-    margin-left: 4rem;
 }
 
 .animations-title h4 {
@@ -1757,7 +1761,7 @@ html {
     .education-content .container,
     .project-content .container,
     .about-area .container,
-    .animations .container,
+    .animations-area .container,
     .contact-content .container {
         padding: 0 1rem;
     }
@@ -1765,10 +1769,14 @@ html {
     .education-content .title,
     .project-content .title,
     .about-area .title,
-    .animations-title h4,
     .contact-title h4 {
         font-size: 2rem;
         margin-left: 1rem;
+    }
+    
+    .animations-title h4 {
+        font-size: 2rem;
+        margin-left: 0;
     }
 
     .about,
@@ -1835,4 +1843,4 @@ html {
     font-size: 0.75rem;
     font-weight: 500;
     margin: 0;
-} 
+}
