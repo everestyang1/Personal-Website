@@ -86,7 +86,7 @@ img {
     justify-content: center;
     align-items: center;
     gap: 1.7rem;
-    margin-left: 8%;
+    margin-left: 117px;
 }
 
 .navbar-left {
@@ -113,25 +113,6 @@ img {
 .navbar a:hover {
     color: var(--primary-color);
     background: rgba(37, 99, 235, 0.1);
-}
-
-/* Responsive navbar margins for larger screens */
-@media (min-width: 1200px) {
-    .navbar {
-        margin-left: 12%;
-    }
-}
-
-@media (min-width: 1400px) {
-    .navbar {
-        margin-left: 15%;
-    }
-}
-
-@media (min-width: 1600px) {
-    .navbar {
-        margin-left: 18%;
-    }
 }
 
 /* Hero Section */
