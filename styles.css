@@ -473,7 +473,7 @@ img {
 }
 
 .timeline-item.expanded .timeline-description {
-    max-height: 500px;
+    max-height: 800px;
     opacity: 1;
     transform: translateY(0);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
