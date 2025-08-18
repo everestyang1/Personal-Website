@@ -484,6 +484,65 @@ img {
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Hidden Experiences */
+.hidden-experience {
+    display: none;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hidden-experience.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* See More Button */
+.see-more-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.see-more-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.see-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+}
+
+.see-more-btn:active {
+    transform: translateY(0);
+}
+
+.see-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.see-more-btn:hover::before {
+    left: 100%;
+}
+
 /* Projects Section */
 .project-content {
     padding: 4rem 2rem;

@@ -337,7 +337,7 @@
         </div>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item hidden-experience">
                     <div class="timeline-logo small">
                         <img src="images/ucsd.png" alt="UCSD Logo">
                     </div>
@@ -355,7 +355,7 @@
             </div>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item hidden-experience">
                     <div class="timeline-logo">
                         <img src="images/lyst.png" alt="LYST Logo">
                     </div>
@@ -375,7 +375,7 @@
             </div>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item hidden-experience">
                     <div class="timeline-logo">
                         <img src="images/umassboston.jpg" alt="UMass Boston Logo">
                     </div>
@@ -395,12 +395,39 @@
                     </div>
                 </div>
             </div>
+            <div class="see-more-container">
+                <button class="see-more-btn" id="seeMoreBtn">See More Experiences</button>
+            </div>
         </div>
     </section>
     <!-------------------------- Experience Script -------------------------->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             
+            // See More Experiences functionality
+            const seeMoreBtn = document.getElementById('seeMoreBtn');
+            const hiddenExperiences = document.querySelectorAll('.hidden-experience');
+            let experiencesShown = false;
+
+            if (seeMoreBtn) {
+                seeMoreBtn.addEventListener('click', function() {
+                    if (!experiencesShown) {
+                        // Show hidden experiences with smooth unified animation
+                        hiddenExperiences.forEach((experience) => {
+                            experience.classList.add('show');
+                        });
+                        seeMoreBtn.textContent = 'See Less Experiences';
+                        experiencesShown = true;
+                    } else {
+                        // Hide experiences
+                        hiddenExperiences.forEach((experience) => {
+                            experience.classList.remove('show');
+                        });
+                        seeMoreBtn.textContent = 'See More Experiences';
+                        experiencesShown = false;
+                    }
+                });
+            }
             
             function checkScrollPosition(element) {
                 var topOfElement = element.getBoundingClientRect().top;
