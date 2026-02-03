@@ -1028,8 +1028,8 @@ img {
 
     .main-photo {
         width: 100%;
-        max-width: 300px;
-        height: 300px;
+        max-width: 240px;
+        height: 240px;
         margin: 0 auto 1.5rem;
     }
 
@@ -1436,8 +1436,8 @@ html {
 }
 
 .main-photo {
-    width: 230px;
-    height: 230px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
@@ -1516,8 +1516,8 @@ html {
     }
     
     .main-photo {
-        width: 220px;
-        height: 220px;
+        width: 170px;
+        height: 170px;
         margin-bottom: -2rem;
         margin-top: 1rem;
     }
