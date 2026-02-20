@@ -411,6 +411,7 @@ img {
 
 .timeline-content {
     flex: 1;
+    min-width: 0;
     display: flex;
     flex-direction: column;
 }
@@ -1025,6 +1026,10 @@ img {
         order: 2;
     }
 
+    .about-content .textion p {
+        overflow-wrap: break-word;
+    }
+
     .about-photo {
         order: 1;
     }
@@ -1054,10 +1059,28 @@ img {
 
     .timeline-title {
         font-size: 1.1rem;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 
     .timeline-subtitle {
         font-size: 0.9rem;
+        overflow-wrap: break-word;
+    }
+
+    .timeline-header {
+        flex-wrap: wrap;
+        gap: 0.35rem;
+    }
+
+    .timeline-date,
+    .timeline-location {
+        font-size: 0.8rem;
+    }
+
+    .timeline-description p a {
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
 
     /* Projects Section */
@@ -1072,10 +1095,17 @@ img {
 
     .project h4 {
         font-size: 1.1rem;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 
     .project p {
         font-size: 0.9rem;
+        overflow-wrap: break-word;
+    }
+
+    .project-link {
+        word-break: break-word;
     }
 
     /* Blog Section */
@@ -1202,7 +1232,7 @@ img {
 }
 
 /* Scroll offset for smooth navigation */
-#home, #about, #experience, #projects, #blog, #contact {
+#home, #about, #experience, #projects, #contact {
     scroll-margin-top: 30px;
 }
 
