@@ -1068,19 +1068,23 @@ img {
         overflow-wrap: break-word;
     }
 
-    .timeline-header {
+    .education-content .timeline-header {
         flex-direction: column;
         align-items: flex-start;
         flex-wrap: nowrap;
         gap: 0.2rem;
     }
 
-    .timeline-date,
-    .timeline-location {
+    .education-content .timeline-date,
+    .education-content .timeline-location {
         font-size: 0.8rem;
     }
 
-    .timeline-location {
+    .education-content .timeline-date {
+        white-space: nowrap;
+    }
+
+    .education-content .timeline-location {
         margin-left: 0;
     }
 
