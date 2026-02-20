@@ -193,9 +193,12 @@ img {
 }
 
 .rotating-text {
-    height: 50px;
+    min-height: 80px;
     margin: 1rem 0 30px 0;
-    overflow: hidden;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-subtitle {
@@ -986,7 +989,7 @@ img {
     }
     
     .rotating-text {
-        height: 60px;
+        min-height: 72px;
         margin: 0.5rem 0 20px 0;
     }
 
