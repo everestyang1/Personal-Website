@@ -18,12 +18,12 @@
     <header class="header-area">
         <div class="container">
             <div class="header">
-                <a href="#" class="logo">Everest Yang</a>
+                <a href="#home" class="logo">Everest Yang</a>
                 <nav class="navbar">
                     <div class="navbar-left">
-                        <a href="#home">Home</a>
                         <a href="#about">About Me</a>
                         <a href="#experience">Experience</a>
+                        <a href="#publications">Publications</a>
                         <a href="#projects">Projects</a>
                     </div>
                 </nav>
@@ -42,9 +42,9 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>
     <div class="mobile-menu">
-        <a href="#home">Home</a>
         <a href="#about">About Me</a>
         <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </div>
@@ -88,6 +88,17 @@
                     mobileOverlay.classList.remove('active');
                 });
             });
+
+            // Logo click: scroll to top and close mobile menu
+            const logo = document.querySelector('.logo');
+            if (logo) {
+                logo.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    mobileOverlay.classList.remove('active');
+                });
+            }
         });
     </script>
     <!-------------------------- Home Page -------------------------->
@@ -325,7 +336,7 @@
                         <div class="timeline-description">
                             <p>• Conducted Computational Oncology research (HNSCC & Gliomas) in the Center for Radiological Research under Prof. Igor Shurak</p>
                             <p>• Developed CAST, a novel ML framework for causal survival forests to model time-varying treatment effects across medical interventions</p>
-                            <p>• First Author at <a href="https://arxiv.org/pdf/2505.06367" target="_blank">3 NeurIPS Workshops</a> + Second Author: <a href="https://www.redjournal.org/article/S0360-3016(25)02970-0/fulltext" target="_blank">International Journal of Radiation Oncology • Biology • Physics</a>, ASTRO, Gilbert W. Beebe Symposium, Yale School of Medicine</p>
+                            <p>• First Author at <a href="https://arxiv.org/pdf/2505.06367" target="_blank">3 NeurIPS Workshops</a> + Second Author: <a href="https://www.redjournal.org/article/S0360-3016(25)02970-0/fulltext" target="_blank">International Journal of Radiation Oncology • Biology • Physics</a>, <a href="https://drive.google.com/file/d/1Zg7A4Jm3wZc4FrCw9ndnH42AGs2CDw3U/view?usp=sharing" target="_blank">ASTRO</a>, Gilbert W. Beebe Symposium, Yale School of Medicine</p>
             </div>
             </div>
         </div>
@@ -573,6 +584,31 @@
 
         });
     </script>
+
+    <!-------------------------- Publications & Conferences Section -------------------------->
+    <section class="publications-content" id="publications">
+        <div class="container">
+            <h3 class="title">Publications & Conferences</h3>
+            <div class="publications-list">
+                <ol class="publications-ol">
+                    <li class="publication-item"><strong>E. Yang</strong>, R. Vasishtha, L.K. Dad, L.A. Kachnic, A. Hope, E. Wang, X. Wu, Y. Yuan, D.J. Brenner, I. Shuryak. <em>"CAST: Time-Varying Treatment Effects with Application to Chemotherapy and Radiotherapy on Head and Neck Squamous Cell Carcinoma."</em> <span class="pub-details">3 NeurIPS Workshops: 1) AI for Science, 2) CauScien: Uncovering Causality in Science, 3) Learning from Time-Series for Health, 2025. <a href="https://arxiv.org/pdf/2505.06367" target="_blank" rel="noopener">Publication</a> | <a href="https://neurips.cc/virtual/2025/loc/san-diego/124098" target="_blank" rel="noopener">Program</a> | <a href="https://drive.google.com/file/d/1udBxmloxQW8FjaoFJ-_IXmXkAU1ObGuE/view" target="_blank" rel="noopener">Poster</a></span></li>
+                    <li class="publication-item"><strong>E. Yang</strong>, S.U. Hwu, C. Lansdowne, J.P. Boster, K. deSilva. <em>"Wi-Fi Signal Propagation of the International Space Station by Autonomous Free-Flying Robot."</em> <span class="pub-details">IEEE International Conference on Wireless for Space and Extreme Environments (WiSEE), 2024. <a href="https://drive.google.com/file/d/1_ISu4dIZnXh1lFVO780XecisLi8kc66k/view?usp=sharing" target="_blank" rel="noopener">Publication</a></span></li>
+                    <li class="publication-item"><strong>E. Yang</strong>, S. Agarwal, C.J. Kinslow, S.K. Cheng, E. Wang, L. Yang, T.J. Wang, L.A. Kachnic, D.J. Brenner, I. Shuryak. <em>"Temporal dynamics of radiotherapy and chemotherapy response in lower-grade gliomas using causal machine learning"</em> <span class="pub-details">Under review, 2025.</span></li>
+                    <li class="publication-item">I. Shuryak, <strong>E. Yang</strong>, R. Vasishtha, A. Hope, E. Wang, X. Wu, Y. Yuan, D.J. Brenner, L.A. Kachnic, L.K. Dad. <em>"Integrating Mechanistic and Machine Learning Models to Assess Radiotherapy Fractionation Impact on HNSCC Patient Survival."</em> <span class="pub-details">International Journal of Radiation Oncology • Biology • Physics (IJROBP), 2025. <a href="https://www.redjournal.org/article/S0360-3016(25)02970-0/fulltext" target="_blank" rel="noopener">Publication</a></span><br><span class="pub-details"><strong>Also presented at: (Second Author for all 4)</strong></span>
+                        <ul class="pub-sub-list">
+                            <li>American Society for Radiation Oncology (ASTRO) Annual Meeting, 2025. <a href="https://drive.google.com/file/d/1Zg7A4Jm3wZc4FrCw9ndnH42AGs2CDw3U/view?usp=sharing" target="_blank" rel="noopener">Poster</a></li>
+                            <li>Gilbert W. Beebe Symposium on AI & ML in Radiation Therapy, 2025</li>
+                            <li>Invited ML Therapeutic Radiology Talk, Yale School of Medicine, 2025</li>
+                            <li>Night Science Workshop: Causal Inference & Reinforcement Learning, 2025</li>
+                        </ul>
+                    </li>
+                    <li class="publication-item">S. Nourji<sup>*</sup>, T. Subramanian<sup>*</sup>, S. Pakala<sup>*</sup>, <strong>E. Yang</strong><sup>*</sup>. <em>"Evaluating Convolutional Neural Networks for Synthetic Image Detection in the Frequency Domain."</em> <span class="pub-details">IEEE International Conference on AI and Data Analytics (ICAD), 2025. <strong>(* indicates Co-First Author)</strong> <a href="https://ieeexplore.ieee.org/abstract/document/11114037" target="_blank" rel="noopener">Publication</a></span></li>
+                    <li class="publication-item">Z. Yang, B. Hedegaard, A. Jaafar, S. Thompson, Y. Wei, <strong>E. Yang</strong>, H. Fu, S.S. Raman, S. Tellex, G. Konidaris, D. Paulius, N. Shah. <em>"SkillWrapper: Autonomously Learning Interpretable Skill Abstractions with Foundation Models."</em> <span class="pub-details">RSS Workshop on Learned Robot Representations (RoboReps), 2025. <a href="https://rss25-roboreps.github.io/papers/26_SkillWrapper_Autonomously_L.pdf" target="_blank" rel="noopener">Publication</a></span></li>
+                    <li class="publication-item"><strong>E. Yang</strong>, Y. Zhuang. <em>"Predicting Flood Streamflow with Auto Regressive Integrated Moving Average Models."</em> <span class="pub-details">Journal of Student Research, 2022. <a href="https://www.jsr.org/hs/index.php/path/article/view/3072/1392" target="_blank" rel="noopener">Publication</a></span></li>
+                </ol>
+            </div>
+        </div>
+    </section>
     
     <!-------------------------- Projects Section -------------------------->
     <section class="project-content" id="projects">

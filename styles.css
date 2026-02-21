@@ -353,6 +353,115 @@ img {
     border-radius: 2px;
 }
 
+/* Publications & Conferences Section */
+.publications-content {
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.publications-content .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding: 0 2rem;
+}
+
+.publications-content .title {
+    font-size: 2.25rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.75rem;
+}
+
+.publications-content .title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.publications-list {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.publications-ol {
+    list-style: decimal;
+    padding-left: 1.5rem;
+    margin: 0;
+    color: #000;
+    font-size: 0.9rem;
+}
+
+.publication-item {
+    margin-bottom: 0.75rem;
+    line-height: 1.65;
+    font-size: 0.9rem;
+    color: #000;
+}
+
+.publication-item:last-child {
+    margin-bottom: 0;
+}
+
+.publication-item strong {
+    font-weight: 700;
+    color: #000;
+}
+
+.publication-item em {
+    font-style: italic;
+    color: #000;
+}
+
+.publication-item .pub-details {
+    color: #000;
+    font-size: 0.9rem;
+}
+
+.publication-item a {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.publication-item a:hover {
+    opacity: 0.85;
+}
+
+.pub-sub-list {
+    margin: 0.5rem 0 0 1rem;
+    padding-left: 1.25rem;
+    list-style: disc;
+    color: #000;
+    font-size: 0.9rem;
+}
+
+.pub-sub-list li {
+    margin-bottom: 0.35rem;
+}
+
+.pub-missing {
+    font-size: 0.9rem;
+    color: #000;
+    font-style: italic;
+}
+
 .timeline {
     background: white;
     border-radius: 20px;
@@ -1750,6 +1859,7 @@ html {
 /* Common title styles for all sections */
 .education-content .title,
 .project-content .title,
+.publications-content .title,
 .about-area .title,
 .animations-title h4 {
     font-size: 2.25rem;
@@ -1764,6 +1874,7 @@ html {
 
 .education-content .title::after,
 .project-content .title::after,
+.publications-content .title::after,
 .about-area .title::after,
 .animations-title h4::after {
     content: '';
@@ -1779,6 +1890,7 @@ html {
 /* Update container styles to ensure consistent width and padding */
 .education-content .container,
 .project-content .container,
+.publications-content .container,
 .about-area .container,
 .animations .container {
     max-width: 1200px;
@@ -1791,6 +1903,7 @@ html {
 /* Common spacing for all sections */
 .education-content,
 .project-content,
+.publications-content,
 .about-area,
 .animations-area,
 .contact-content {
@@ -1815,6 +1928,7 @@ html {
 /* Common title styles */
 .education-content .title,
 .project-content .title,
+.publications-content .title,
 .about-area .title,
 .animations-title h4,
 .contact-title h4 {
@@ -1906,6 +2020,7 @@ html {
 @media (max-width: 768px) {
     .education-content,
     .project-content,
+    .publications-content,
     .about-area,
     .animations-area,
     .contact-content {
@@ -1914,6 +2029,7 @@ html {
 
     .education-content .container,
     .project-content .container,
+    .publications-content .container,
     .about-area .container,
     .animations-area .container,
     .contact-content .container {
@@ -1922,6 +2038,7 @@ html {
 
     .education-content .title,
     .project-content .title,
+    .publications-content .title,
     .about-area .title,
     .contact-title h4 {
         font-size: 2rem;
@@ -1931,6 +2048,20 @@ html {
     .animations-title h4 {
         font-size: 2rem;
         margin-left: 0;
+    }
+
+    .publications-list {
+        padding: 1rem;
+    }
+
+    .publication-item,
+    .publication-item .pub-details {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .publications-ol {
+        padding-left: 1.25rem;
     }
 
     .about,
