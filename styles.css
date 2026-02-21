@@ -1077,14 +1077,14 @@ img {
 
     .education-content .timeline-date,
     .education-content .timeline-location {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
     .education-content .timeline-date {
         white-space: nowrap !important;
-        display: inline-flex;
-        width: auto;
-        max-width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
 
     .education-content .timeline-location {
@@ -1092,6 +1092,8 @@ img {
         color: var(--light-text);
         text-decoration: none;
         pointer-events: none;
+        -webkit-touch-callout: none;
+        user-select: none;
     }
 
     .education-content .timeline-location a,
@@ -1099,6 +1101,12 @@ img {
         color: inherit;
         text-decoration: none;
         pointer-events: none;
+    }
+
+    .education-content .timeline-location .no-map-link {
+        pointer-events: none;
+        -webkit-touch-callout: none;
+        user-select: none;
     }
 
     .timeline-description p a {
