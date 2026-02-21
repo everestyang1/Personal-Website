@@ -1081,11 +1081,24 @@ img {
     }
 
     .education-content .timeline-date {
-        white-space: nowrap;
+        white-space: nowrap !important;
+        display: inline-flex;
+        width: auto;
+        max-width: 100%;
     }
 
     .education-content .timeline-location {
         margin-left: 0;
+        color: var(--light-text);
+        text-decoration: none;
+        pointer-events: none;
+    }
+
+    .education-content .timeline-location a,
+    .education-content .timeline-date a {
+        color: inherit;
+        text-decoration: none;
+        pointer-events: none;
     }
 
     .timeline-description p a {
