@@ -1166,19 +1166,10 @@ img {
     }
 
     /* About Section */
-    .about-area {
-        padding: 2.75rem 0.35rem;
-    }
-
-    .about-area .container {
-        max-width: 100%;
-        padding: 0 0.25rem;
-    }
-
     .about {
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding: 1.35rem 0.85rem;
+        padding: 1.5rem;
     }
 
     .about-content {
@@ -1186,6 +1177,8 @@ img {
     }
 
     .about-content .textion p {
+        font-size: 1rem;
+        line-height: 1.6;
         overflow-wrap: break-word;
     }
 
@@ -1637,11 +1630,11 @@ html {
 }
 
 .about-area .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
 }
 
 .about-area .title {
@@ -1782,7 +1775,7 @@ html {
     }
     
     .textion {
-        margin-left: 0;
+        margin-left: 0.5rem;
     }
     
     .main-photo {
@@ -2114,6 +2107,7 @@ html {
 
 @media (max-width: 768px) {
     .education-content,
+    .about-area,
     .project-content,
     .publications-content,
     .animations-area,
@@ -2122,6 +2116,7 @@ html {
     }
 
     .education-content .container,
+    .about-area .container,
     .project-content .container,
     .publications-content .container,
     .animations-area .container,
@@ -2169,7 +2164,7 @@ html {
 
     .about,
     .vidtext {
-        padding: 1.35rem 0.85rem;
+        padding: 1.5rem;
     }
 }
 
