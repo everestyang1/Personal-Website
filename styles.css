@@ -518,6 +518,15 @@ img {
     object-fit: contain;
 }
 
+/* Portrait / padded assets: fill the square like other marks */
+.timeline-logo.small img.timeline-logo-cover,
+.timeline-logo img.timeline-logo-cover {
+    width: 78%;
+    height: 78%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .timeline-content {
     flex: 1;
     min-width: 0;
@@ -713,6 +722,7 @@ img {
 
 .project-carousel.grabbing {
     cursor: grabbing;
+    touch-action: none;
 }
 
 .project-track {

@@ -376,10 +376,26 @@
                 </div>
                 <div class="timeline-item hidden-experience">
                     <div class="timeline-logo small">
+                        <img src="images/csdug.jpg" alt="Brown CS DUG Logo">
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Brown CS DUG</h3>
+                        <h4 class="timeline-subtitle">CS Undergraduate President</h4>
+                        <div class="timeline-header">
+                            <p class="timeline-date"><i class="fa fa-calendar"></i> Sep 2024 - Present</p>
+                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">Providence,&#8204; RI</span></p>
+                        </div>
+                        <div class="timeline-description">
+                            <p>• Leading Brown's CS Departmental Undergraduate Group (CS DUG)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item hidden-experience">
+                    <div class="timeline-logo small">
                         <img src="images/browncs.png" alt="Brown Computer Science Logo">
                     </div>
                     <div class="timeline-content">
-                        <h3 class="timeline-title">Brown University, Computer Science</h3>
+                        <h3 class="timeline-title">Brown Computer Science</h3>
                         <h4 class="timeline-subtitle">Undergraduate Teaching Assistant</h4>
                         <div class="timeline-header">
                             <p class="timeline-date"><i class="fa fa-calendar"></i> Jan 2026 - Present</p>
@@ -392,7 +408,7 @@
                 </div>
                 <div class="timeline-item hidden-experience">
                     <div class="timeline-logo small">
-                        <img src="images/fablogo.jpg" alt="Founders @ Brown Logo">
+                        <img src="images/fablogo.jpg" alt="Founders @ Brown Logo" class="timeline-logo-cover">
                     </div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">Founders @ Brown</h3>
@@ -429,7 +445,7 @@
                         <img src="images/awslogo.png" alt="AWS Logo">
             </div>
                     <div class="timeline-content">
-                        <h3 class="timeline-title">Amazon Web Services (AWS)</h3>
+                        <h3 class="timeline-title">Amazon Web Services</h3>
                         <h4 class="timeline-subtitle">Software Engineer Intern</h4>
                         <div class="timeline-header">
                             <p class="timeline-date"><i class="fa fa-calendar"></i> May 2025 - Aug 2025</p>
@@ -696,7 +712,7 @@
                     </div>
 
                     <!-- Duplicate first projects for seamless loop -->
-S                    <div class="project">
+                    <div class="project">
                         <i class="fas fa-satellite"></i>
                         <h4>Perovskite Visuals and Degradation eXperiment</h4>
                         <p>Building Embedded Operating System in C for PVDX, Brown's 3U-CubeSat under NASA ELaNa program, designed to test next-gen perovskite solar cells in harsh orbital environments</p>
@@ -923,16 +939,33 @@ S                    <div class="project">
             const track = document.querySelector('.project-track');
             
             if (!carousel || !track) {
-                console.log('Carousel elements not found');
                 return;
             }
+
+            const LOOP_CARD_COUNT = 9;
 
             let isDragging = false;
             let startPos = 0;
             let currentTranslate = 0;
             let prevTranslate = 0;
-            let animationId = null;
-            let isAnimationPaused = false;
+            let manualMode = false;
+
+            function readTrackTranslateX() {
+                const t = window.getComputedStyle(track).transform;
+                if (!t || t === 'none') return 0;
+                const m = new DOMMatrix(t);
+                return m.m41;
+            }
+
+            function getScrollBounds() {
+                const first = track.querySelector('.project');
+                if (!first) {
+                    return { min: -(9 * (350 + 32)), max: 0 };
+                }
+                const gap = parseFloat(getComputedStyle(track).gap) || 32;
+                const step = first.getBoundingClientRect().width + gap;
+                return { min: -step * LOOP_CARD_COUNT, max: 0 };
+            }
 
             // Mouse events
             carousel.addEventListener('mousedown', dragStart);
@@ -944,19 +977,56 @@ S                    <div class="project">
             document.addEventListener('touchmove', drag, { passive: false });
             document.addEventListener('touchend', dragEnd);
 
+            function normalizeWheelDelta(delta, deltaMode) {
+                if (deltaMode === 1) return delta * 16;
+                if (deltaMode === 2) return delta * carousel.clientWidth;
+                return delta;
+            }
+
+            carousel.addEventListener('wheel', function onWheel(event) {
+                let dx = normalizeWheelDelta(event.deltaX, event.deltaMode);
+                let dy = normalizeWheelDelta(event.deltaY, event.deltaMode);
+                if (event.shiftKey && Math.abs(dy) >= Math.abs(dx)) {
+                    dx = dy;
+                }
+                if (Math.abs(dx) < Math.abs(dy) || Math.abs(dx) < 0.5) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                const bounds = getScrollBounds();
+                if (!manualMode) {
+                    manualMode = true;
+                    track.style.animation = 'none';
+                    currentTranslate = readTrackTranslateX();
+                    currentTranslate = Math.max(bounds.min, Math.min(bounds.max, currentTranslate));
+                    prevTranslate = currentTranslate;
+                }
+
+                currentTranslate += dx;
+                currentTranslate = Math.max(bounds.min, Math.min(bounds.max, currentTranslate));
+                prevTranslate = currentTranslate;
+                track.style.transform = `translateX(${currentTranslate}px)`;
+            }, { passive: false });
+
             function dragStart(event) {
-                console.log('Drag start triggered');
+                if (event.target.closest('a')) return;
+
                 isDragging = true;
+                const bounds = getScrollBounds();
+                prevTranslate = readTrackTranslateX();
+                prevTranslate = Math.max(bounds.min, Math.min(bounds.max, prevTranslate));
+                currentTranslate = prevTranslate;
                 startPos = getPositionX(event);
                 carousel.style.cursor = 'grabbing';
                 carousel.classList.add('grabbing');
                 track.classList.add('grabbing');
                 
-                // Completely disable the CSS animation
                 track.style.animation = 'none';
                 track.style.transform = `translateX(${prevTranslate}px)`;
+                manualMode = true;
                 
-                // Prevent text selection and default behavior
                 event.preventDefault();
                 event.stopPropagation();
             }
@@ -969,70 +1039,41 @@ S                    <div class="project">
                 
                 const currentPosition = getPositionX(event);
                 const diff = currentPosition - startPos;
+                const bounds = getScrollBounds();
                 currentTranslate = prevTranslate + diff;
+                currentTranslate = Math.max(bounds.min, Math.min(bounds.max, currentTranslate));
                 
-                // Limit the drag range
-                const maxTranslate = 0;
-                const minTranslate = -(9 * (350 + 32)); // 9 projects * (width + gap)
-                currentTranslate = Math.max(minTranslate, Math.min(maxTranslate, currentTranslate));
-                
-                // Apply the transform
                 track.style.transform = `translateX(${currentTranslate}px)`;
-                console.log('Dragging, translateX:', currentTranslate);
             }
 
             function dragEnd() {
                 if (!isDragging) return;
                 
-                console.log('Drag end triggered');
                 isDragging = false;
                 prevTranslate = currentTranslate;
                 carousel.style.cursor = 'grab';
                 carousel.classList.remove('grabbing');
                 track.classList.remove('grabbing');
-                
-                // Resume the CSS animation after a short delay
-                setTimeout(() => {
-                    if (!isDragging) {
-                        track.style.animation = 'scroll 60s linear infinite';
-                        track.style.transform = '';
-                    }
-                }, 100);
             }
 
             function getPositionX(event) {
                 return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
             }
 
-            // Add hover pause functionality
             carousel.addEventListener('mouseenter', () => {
-                if (!isDragging) {
+                if (!manualMode && !isDragging) {
                     track.style.animationPlayState = 'paused';
                 }
             });
 
             carousel.addEventListener('mouseleave', () => {
-                if (!isDragging) {
+                if (!manualMode && !isDragging) {
                     track.style.animationPlayState = 'running';
                 }
             });
-
-            console.log('Carousel drag functionality initialized');
         }
 
-        // Initialize carousel drag functionality
         initCarouselDrag();
-        
-        // Test if carousel elements exist
-        setTimeout(() => {
-            const carousel = document.querySelector('.project-carousel');
-            const track = document.querySelector('.project-track');
-            if (carousel && track) {
-                console.log('Carousel elements found and drag functionality should be working');
-            } else {
-                console.log('Carousel elements not found');
-            }
-        }, 1000);
         
         // Existing gradient background interaction
         document.addEventListener('mousemove', (e) => {
