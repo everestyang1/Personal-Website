@@ -638,7 +638,7 @@
     <!-------------------------- Projects Section -------------------------->
     <section class="project-content" id="projects">
         <div class="container">
-            <h3 class="title">Featured Projects</h3>
+            <h3 class="title">Projects</h3>
             <div class="project-carousel-wrapper">
                 <button type="button" class="project-carousel-btn project-carousel-btn--prev" aria-label="Previous projects">
                     <i class="fas fa-chevron-left" aria-hidden="true"></i>
@@ -956,7 +956,18 @@
                     updateButtons();
                     return;
                 }
-                var w = carousel.clientWidth;
+                var refItem = document.querySelector('.education-content .timeline-item');
+                var st = window.getComputedStyle(carousel);
+                var pl = parseFloat(st.paddingLeft) || 0;
+                var pr = parseFloat(st.paddingRight) || 0;
+                var inner = Math.floor(carousel.getBoundingClientRect().width - pl - pr);
+                var w;
+                if (refItem) {
+                    w = Math.round(refItem.getBoundingClientRect().width);
+                    w = Math.min(w, inner);
+                } else {
+                    w = inner;
+                }
                 if (w <= 0) {
                     return;
                 }
