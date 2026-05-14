@@ -702,57 +702,90 @@ img {
     border-radius: 2px;
 }
 
-.project-carousel {
+.project-carousel-wrapper {
     position: relative;
-    overflow: hidden;
     width: 100%;
     margin: 2rem 0;
-    cursor: grab;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.project-carousel-btn {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    background: #fff;
+    color: var(--primary-color);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.12);
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    z-index: 2;
+}
+
+.project-carousel-btn:hover:not(:disabled) {
+    background: rgba(37, 99, 235, 0.08);
+    border-color: var(--secondary-color, #1e40af);
+    color: var(--secondary-color, #1e40af);
+    transform: scale(1.05);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.2);
+}
+
+.project-carousel-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none;
+    background: #f8fafc;
+    border-color: rgba(37, 99, 235, 0.35);
+    color: rgba(37, 99, 235, 0.35);
+}
+
+.project-carousel {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0.25rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(37, 99, 235, 0.4) transparent;
+    -webkit-overflow-scrolling: touch;
+    cursor: default;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    pointer-events: auto;
-    touch-action: pan-y pinch-zoom;
+    touch-action: pan-x pinch-zoom;
 }
 
-.project-carousel:active {
-    cursor: grabbing;
+.project-carousel::-webkit-scrollbar {
+    height: 8px;
 }
 
-.project-carousel.grabbing {
-    cursor: grabbing;
-    touch-action: none;
+.project-carousel::-webkit-scrollbar-thumb {
+    background: rgba(37, 99, 235, 0.35);
+    border-radius: 4px;
 }
 
 .project-track {
     display: flex;
     gap: 2rem;
-    animation: scroll 60s linear infinite;
-    width: calc(14 * (350px + 2rem));
-    cursor: grab;
-    will-change: transform;
+    width: max-content;
+    padding: 0.25rem 0 0.5rem;
     pointer-events: auto;
-    transform: translateX(0);
 }
 
-.project-track:hover {
-    animation-play-state: paused;
-}
-
-.project-track.grabbing {
-    animation-play-state: paused;
-    cursor: grabbing;
-    animation: none !important;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-9 * (350px + 2rem)));
-    }
+.project-track .project {
+    scroll-snap-align: start;
 }
 
 .project {
@@ -768,6 +801,8 @@ img {
     gap: 0.75rem;
     width: 350px;
     flex-shrink: 0;
+    user-select: text;
+    -webkit-user-select: text;
 }
 
 .project:hover {
@@ -1457,6 +1492,7 @@ html {
     width: 100%;
     height: 100%;
     z-index: -2;
+    pointer-events: none;
     background: 
         radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.8) 0%, transparent 30%),
         radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.8) 0%, transparent 30%),
@@ -1468,7 +1504,6 @@ html {
             rgba(96, 165, 250, 0.8)
         );
     filter: blur(100px);
-    transition: transform 0.3s ease-out;
 }
 
 .particles {
@@ -1861,7 +1896,7 @@ html {
 
 /* Responsive Design for Projects Section */
 @media (max-width: 992px) {
-    .project-carousel {
+    .project-carousel-wrapper {
         margin: 1rem 0;
     }
 }
@@ -1952,7 +1987,7 @@ html {
 
 /* Common content spacing */
 .timeline,
-.project-carousel,
+.project-carousel-wrapper,
 .about,
 .vidtext {
     margin-top: 1rem;

@@ -146,7 +146,7 @@
         const titles = [
             "CS & ML, Robotics, Venture @ Brown University",
             "Intern @ Netflix, Anduril, Amazon (AWS), NASA, Zeta Surgical",
-            "Research @ Brown Robotics, Columbia Med, UCSD, UMass Boston",
+            "Research @ Brown, Columbia Med, UCSD, UMass Boston",
             "Aspiring Roboticist / Research Scientist"
 
         ];
@@ -221,10 +221,10 @@
         <div class="about-content">
                     <div class="textion">
                         <p>
-                            Hi, my name is Everest Yang, and I'm from Massachusetts. I'm a Computer Science student at Brown University and a <a href="https://www.brown.edu/news/2026-05-12/fellowships-goldwater-oxcam-knight-hennessy" target="_blank" rel="noopener noreferrer">2026 Barry M. Goldwater Scholar</a>.
+                            Hi, my name is Everest Yang, and I'm from Lexington, MA. I'm a Computer Science student at Brown University and a <a href="https://www.brown.edu/news/2026-05-12/fellowships-goldwater-oxcam-knight-hennessy" target="_blank" rel="noopener noreferrer">2026 Barry M. Goldwater Scholar</a>!
                         </p>
                         <p>
-                            I'm also an incoming MLE Intern at <a href="https://www.anduril.com/" target="_blank" rel="noopener noreferrer">Anduril Industries</a> and a Research Intern at <a href="https://research.netflix.com/" target="_blank" rel="noopener noreferrer">Netflix</a>. My interests range from Deep Learning to Robotics, Oncology, and more.
+                            I'm also an incoming MLE Intern at <a href="https://www.anduril.com/" target="_blank" rel="noopener noreferrer">Anduril Industries</a> and incoming Research Intern at <a href="https://research.netflix.com/" target="_blank" rel="noopener noreferrer">Netflix</a>. My interests range from Deep Learning to Robotics, Oncology, and more.
                         </p>
                         <!-- After graduating, I am planning to pursue a PhD in CS/Robotics.  -->
                         <p>
@@ -639,16 +639,20 @@
     <section class="project-content" id="projects">
         <div class="container">
             <h3 class="title">Featured Projects</h3>
-            <div class="project-carousel">
-                <div class="project-track">
-                    <div class="project">
+            <div class="project-carousel-wrapper">
+                <button type="button" class="project-carousel-btn project-carousel-btn--prev" aria-label="Previous projects">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <div class="project-carousel">
+                    <div class="project-track">
+                        <div class="project">
                         <i class="fas fa-satellite"></i>
                         <h4>Perovskite Visuals and Degradation eXperiment</h4>
                         <p>Building Embedded Operating System in C for PVDX, Brown's 3U-CubeSat under NASA ELaNa program, designed to test next-gen perovskite solar cells in harsh orbital environments</p>
-                    </div>
-                    <div class="project">
+                        </div>
+                        <div class="project">
                         <i class="fas fa-eye"></i>
-                        <h4>Evaluating Fourier Transform Features for Detection of AI-Generated Images</h4>
+                        <h4>Fourier Transform Features for Detection of AI-Generated Images</h4>
                         <p>Developed TensorFlow CNN architectures incorporating Fourier Transform features to enhance detection of AI-generated images</p>
                         <div class="project-links">
                             <a href="https://ieeexplore.ieee.org/abstract/document/11114037" class="project-link" target="_blank">
@@ -660,7 +664,7 @@
                     <div class="project">
                         <i class="fas fa-robot"></i>
                         <h4>Interpreting Contrastive RL in Goal-Conditioned Environments</h4>
-                        <p>Contrastive Reinforcement Learning in MiniGrid: Learn goal-reaching behavior without explicit reward shaping; Interpretability studies and ablation experiments included</p>
+                        <p>Contrastive RL in MiniGrid: Learn goal-reaching behavior without explicit reward shaping; Interpretability studies and ablation experiments included</p>
                         <div class="project-links">
                             <a href="https://drive.google.com/file/d/1G7rDfKGYQ6kYJZ0hKEWla1YIjPE_VRpd/view?usp=sharing" class="project-link" target="_blank">
                                 <i class="fas fa-file-alt"></i>
@@ -682,7 +686,7 @@
                     <div class="project">
                         <i class="fas fa-database"></i>
                         <h4>Multi-Threaded Database Server</h4>
-                        <p>Created a multi-threaded server in C using TCP to manage concurrent client connections and facilitate interaction with a shared key-value database</p>
+                        <p>Multi-threaded server in C using TCP to manage concurrent client connections and facilitate interaction with a shared key-value database</p>
                     </div>
                     <div class="project">
                         <i class="fas fa-microphone"></i>
@@ -703,59 +707,18 @@
                     <div class="project">
                         <i class="fas fa-terminal"></i>
                         <h4>Shell</h4>
-                        <p>Built a Bash-like shell in C with job control, enabling foreground and background process management with signal handling</p>
+                        <p>Bash-like shell in C with job control, enabling foreground and background process management with signal handling</p>
                     </div>
                     <div class="project">
                         <i class="fas fa-globe"></i>
                         <h4>Everest Yang's Personal Website</h4>
-                        <p>Developed my Personal Portfolio Website from scratch using HTML, CSS, and JavaScript. TBH, I'm not the biggest fan of WebDev but I made this website for fun ;)</p>
+                        <p>My Personal Website built from scratch using HTML, CSS, and JavaScript. TBH, I'm not the biggest fan of WebDev but I made this website for fun ;)</p>
                     </div>
-
-                    <!-- Duplicate first projects for seamless loop -->
-                    <div class="project">
-                        <i class="fas fa-satellite"></i>
-                        <h4>Perovskite Visuals and Degradation eXperiment</h4>
-                        <p>Building Embedded Operating System in C for PVDX, Brown's 3U-CubeSat under NASA ELaNa program, designed to test next-gen perovskite solar cells in harsh orbital environments</p>
-                    </div>
-                    <div class="project">
-                        <i class="fas fa-eye"></i>
-                        <h4>Evaluating Fourier Transform Features for Detection of AI-Generated Images</h4>
-                        <p>Developed and tested TensorFlow CNN architectures incorporating Fourier Transform features to enhance detection of AI-generated images</p>
-                        <div class="project-links">
-                            <a href="https://ieeexplore.ieee.org/abstract/document/11114037" class="project-link" target="_blank">
-                                <i class="fas fa-file-alt"></i>
-                                IEEE ICAD Publication
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <i class="fas fa-robot"></i>
-                        <h4>Interpreting Contrastive RL in Goal-Conditioned Environments</h4>
-                        <p>Contrastive Reinforcement Learning (CRL) in MiniGrid: learn goal-reaching behavior without explicit reward shaping; Analyzed emergent exploration and design choices through interpretability studies and ablation experiments</p>
-                        <div class="project-links">
-                            <a href="https://drive.google.com/file/d/1G7rDfKGYQ6kYJZ0hKEWla1YIjPE_VRpd/view?usp=sharing" class="project-link" target="_blank">
-                                <i class="fas fa-file-alt"></i>
-                                CS2470: (Grad) Deep Learning Report
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <i class="fas fa-lock"></i>
-                        <h4>Double Ratchet: Symmetric-Key Ratchet Extension for Signal</h4>
-                        <p>Secure messaging protocol with per-message forward secrecy, skipped-message recovery, TTL-based skipped-key eviction, and bounded cache enforcement.</p>
-                        <div class="project-links">
-                            <a href="https://drive.google.com/file/d/1zLsk4DzyXprmS-RNbRArDT44Cg4T5sZr/view?usp=sharing" class="project-link" target="_blank">
-                                <i class="fas fa-file-alt"></i>
-                                CS1515: Applied Cryptography Final Project Report
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <i class="fas fa-database"></i>
-                        <h4>Multi-Threaded Database Server</h4>
-                        <p>Created a multi-threaded server in C using TCP to manage concurrent client connections and facilitate interaction with a shared key-value database</p>
                     </div>
                 </div>
+                <button type="button" class="project-carousel-btn project-carousel-btn--next" aria-label="Next projects">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -798,11 +761,6 @@
                     });
                 });
             });
-        });
-
-        // Mobile Menu
-        document.querySelector('.menu_icon').addEventListener('click', function() {
-            document.querySelector('.navbar').classList.toggle('active');
         });
 
         // Scroll Animation
@@ -933,169 +891,67 @@
         // Initialize particle system
         const particleSystem = new ParticleSystem();
         
-        // Project Carousel Drag Functionality
-        function initCarouselDrag() {
+        function initProjectCarousel() {
             const carousel = document.querySelector('.project-carousel');
-            const track = document.querySelector('.project-track');
-            
-            if (!carousel || !track) {
+            const track = carousel && carousel.querySelector('.project-track');
+            const prevBtn = document.querySelector('.project-carousel-btn--prev');
+            const nextBtn = document.querySelector('.project-carousel-btn--next');
+
+            if (!carousel || !track || !prevBtn || !nextBtn) {
                 return;
             }
 
-            const LOOP_CARD_COUNT = 9;
-
-            let isDragging = false;
-            let startPos = 0;
-            let currentTranslate = 0;
-            let prevTranslate = 0;
-            let manualMode = false;
-
-            function readTrackTranslateX() {
-                const t = window.getComputedStyle(track).transform;
-                if (!t || t === 'none') return 0;
-                const m = new DOMMatrix(t);
-                return m.m41;
-            }
-
-            function getScrollBounds() {
-                const first = track.querySelector('.project');
-                if (!first) {
-                    return { min: -(9 * (350 + 32)), max: 0 };
+            function getStep() {
+                const card = track.querySelector('.project');
+                if (!card) {
+                    return 382;
                 }
                 const gap = parseFloat(getComputedStyle(track).gap) || 32;
-                const step = first.getBoundingClientRect().width + gap;
-                return { min: -step * LOOP_CARD_COUNT, max: 0 };
+                return card.getBoundingClientRect().width + gap;
             }
 
-            // Mouse events
-            carousel.addEventListener('mousedown', dragStart);
-            document.addEventListener('mousemove', drag);
-            document.addEventListener('mouseup', dragEnd);
+            function updateButtons() {
+                const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+                const eps = 3;
+                const atStart = carousel.scrollLeft <= eps;
+                const atEnd = carousel.scrollLeft >= maxScroll - eps;
 
-            // Touch events for mobile
-            carousel.addEventListener('touchstart', dragStart, { passive: false });
-            document.addEventListener('touchmove', drag, { passive: false });
-            document.addEventListener('touchend', dragEnd);
-
-            function normalizeWheelDelta(delta, deltaMode) {
-                if (deltaMode === 1) return delta * 16;
-                if (deltaMode === 2) return delta * carousel.clientWidth;
-                return delta;
+                prevBtn.disabled = atStart;
+                nextBtn.disabled = atEnd;
+                prevBtn.setAttribute('aria-disabled', String(atStart));
+                nextBtn.setAttribute('aria-disabled', String(atEnd));
             }
 
-            carousel.addEventListener('wheel', function onWheel(event) {
-                let dx = normalizeWheelDelta(event.deltaX, event.deltaMode);
-                let dy = normalizeWheelDelta(event.deltaY, event.deltaMode);
-                if (event.shiftKey && Math.abs(dy) >= Math.abs(dx)) {
-                    dx = dy;
-                }
-                if (Math.abs(dx) < Math.abs(dy) || Math.abs(dx) < 0.5) {
-                    return;
-                }
-
-                event.preventDefault();
-
-                const bounds = getScrollBounds();
-                if (!manualMode) {
-                    manualMode = true;
-                    track.style.animation = 'none';
-                    currentTranslate = readTrackTranslateX();
-                    currentTranslate = Math.max(bounds.min, Math.min(bounds.max, currentTranslate));
-                    prevTranslate = currentTranslate;
-                }
-
-                currentTranslate += dx;
-                currentTranslate = Math.max(bounds.min, Math.min(bounds.max, currentTranslate));
-                prevTranslate = currentTranslate;
-                track.style.transform = `translateX(${currentTranslate}px)`;
-            }, { passive: false });
-
-            function dragStart(event) {
-                if (event.target.closest('a')) return;
-
-                isDragging = true;
-                const bounds = getScrollBounds();
-                prevTranslate = readTrackTranslateX();
-                prevTranslate = Math.max(bounds.min, Math.min(bounds.max, prevTranslate));
-                currentTranslate = prevTranslate;
-                startPos = getPositionX(event);
-                carousel.style.cursor = 'grabbing';
-                carousel.classList.add('grabbing');
-                track.classList.add('grabbing');
-                
-                track.style.animation = 'none';
-                track.style.transform = `translateX(${prevTranslate}px)`;
-                manualMode = true;
-                
-                event.preventDefault();
-                event.stopPropagation();
+            let updateButtonsRaf = null;
+            function scheduleUpdateButtons() {
+                if (updateButtonsRaf !== null) return;
+                updateButtonsRaf = requestAnimationFrame(function () {
+                    updateButtonsRaf = null;
+                    updateButtons();
+                });
             }
 
-            function drag(event) {
-                if (!isDragging) return;
-                
-                event.preventDefault();
-                event.stopPropagation();
-                
-                const currentPosition = getPositionX(event);
-                const diff = currentPosition - startPos;
-                const bounds = getScrollBounds();
-                currentTranslate = prevTranslate + diff;
-                currentTranslate = Math.max(bounds.min, Math.min(bounds.max, currentTranslate));
-                
-                track.style.transform = `translateX(${currentTranslate}px)`;
-            }
-
-            function dragEnd() {
-                if (!isDragging) return;
-                
-                isDragging = false;
-                prevTranslate = currentTranslate;
-                carousel.style.cursor = 'grab';
-                carousel.classList.remove('grabbing');
-                track.classList.remove('grabbing');
-            }
-
-            function getPositionX(event) {
-                return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
-            }
-
-            carousel.addEventListener('mouseenter', () => {
-                if (!manualMode && !isDragging) {
-                    track.style.animationPlayState = 'paused';
-                }
+            prevBtn.addEventListener('click', function () {
+                carousel.scrollBy({ left: -getStep(), behavior: 'smooth' });
             });
-
-            carousel.addEventListener('mouseleave', () => {
-                if (!manualMode && !isDragging) {
-                    track.style.animationPlayState = 'running';
-                }
+            nextBtn.addEventListener('click', function () {
+                carousel.scrollBy({ left: getStep(), behavior: 'smooth' });
             });
+            carousel.addEventListener('scroll', scheduleUpdateButtons, { passive: true });
+            window.addEventListener('resize', updateButtons);
+            window.addEventListener('load', updateButtons);
+            requestAnimationFrame(function () {
+                requestAnimationFrame(updateButtons);
+            });
+            updateButtons();
         }
 
-        initCarouselDrag();
-        
-        // Existing gradient background interaction
-        document.addEventListener('mousemove', (e) => {
-            const gradient = document.querySelector('.gradient-bg');
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            
-            gradient.style.transform = `translate(${x * 50}px, ${y * 50}px)`;
-        });
-
-        // Existing scroll interaction
-        window.addEventListener('scroll', () => {
-            const gradient = document.querySelector('.gradient-bg');
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * 0.5;
-            
-            gradient.style.transform = `translateY(${rate}px)`;
-        });
+        initProjectCarousel();
 
         // Existing parallax effect
         window.addEventListener('mousemove', (e) => {
             const photo = document.querySelector('.profile-photo');
+            if (!photo) return;
             const x = (e.clientX / window.innerWidth - 0.5) * 20;
             const y = (e.clientY / window.innerHeight - 0.5) * 20;
             
