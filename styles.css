@@ -1122,7 +1122,7 @@ img {
 
     /* About Section */
     .about-area {
-        padding: 3rem 1rem;
+        padding: 2.75rem 0.875rem;
     }
 
     .about {
@@ -1534,17 +1534,17 @@ html {
 
 /* About Section */
 .about-area {
-    padding: 4rem 2rem;
+    padding: 3.5rem 1.75rem;
     position: relative;
     z-index: 1;
 }
 
 .about-area .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
 }
 
 .about-area .title {
@@ -1891,7 +1891,6 @@ html {
 .education-content .container,
 .project-content .container,
 .publications-content .container,
-.about-area .container,
 .animations .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1904,7 +1903,6 @@ html {
 .education-content,
 .project-content,
 .publications-content,
-.about-area,
 .animations-area,
 .contact-content {
     padding: 4rem 2rem;
@@ -1915,7 +1913,7 @@ html {
 /* Common container styles */
 .education-content .container,
 .project-content .container,
-.about-area .container,
+.publications-content .container,
 .animations .container,
 .contact-content .container {
     max-width: 1200px;
@@ -2021,7 +2019,6 @@ html {
     .education-content,
     .project-content,
     .publications-content,
-    .about-area,
     .animations-area,
     .contact-content {
         padding: 4rem 1rem;
@@ -2030,7 +2027,6 @@ html {
     .education-content .container,
     .project-content .container,
     .publications-content .container,
-    .about-area .container,
     .animations-area .container,
     .contact-content .container {
         padding: 0 1rem;
