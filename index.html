@@ -939,6 +939,58 @@
                 nextBtn.setAttribute('aria-disabled', String(atEnd));
             }
 
+            var mqMobileProjects = window.matchMedia('(max-width: 768px)');
+
+            function syncProjectCardWidthsMobile() {
+                var cards = track.querySelectorAll('.project');
+                if (!cards.length) {
+                    return;
+                }
+                if (!mqMobileProjects.matches) {
+                    cards.forEach(function (card) {
+                        card.style.removeProperty('flex');
+                        card.style.removeProperty('width');
+                        card.style.removeProperty('max-width');
+                        card.style.removeProperty('min-width');
+                    });
+                    updateButtons();
+                    return;
+                }
+                var w = carousel.clientWidth;
+                if (w <= 0) {
+                    return;
+                }
+                cards.forEach(function (card) {
+                    card.style.flex = '0 0 ' + w + 'px';
+                    card.style.width = w + 'px';
+                    card.style.maxWidth = w + 'px';
+                    card.style.minWidth = '0';
+                    card.style.boxSizing = 'border-box';
+                });
+                updateButtons();
+            }
+
+            if (typeof ResizeObserver !== 'undefined') {
+                var roCarousel = new ResizeObserver(function () {
+                    window.requestAnimationFrame(syncProjectCardWidthsMobile);
+                });
+                roCarousel.observe(carousel);
+            }
+
+            window.addEventListener('resize', syncProjectCardWidthsMobile);
+            if (mqMobileProjects.addEventListener) {
+                mqMobileProjects.addEventListener('change', syncProjectCardWidthsMobile);
+            } else if (mqMobileProjects.addListener) {
+                mqMobileProjects.addListener(syncProjectCardWidthsMobile);
+            }
+            window.addEventListener('orientationchange', function () {
+                setTimeout(syncProjectCardWidthsMobile, 200);
+            });
+            syncProjectCardWidthsMobile();
+            window.requestAnimationFrame(function () {
+                window.requestAnimationFrame(syncProjectCardWidthsMobile);
+            });
+
             let updateButtonsRaf = null;
             function scheduleUpdateButtons() {
                 if (updateButtonsRaf !== null) return;
@@ -955,12 +1007,10 @@
                 carousel.scrollBy({ left: getStep(), behavior: 'smooth' });
             });
             carousel.addEventListener('scroll', scheduleUpdateButtons, { passive: true });
-            window.addEventListener('resize', updateButtons);
-            window.addEventListener('load', updateButtons);
+            window.addEventListener('load', syncProjectCardWidthsMobile);
             requestAnimationFrame(function () {
-                requestAnimationFrame(updateButtons);
+                requestAnimationFrame(syncProjectCardWidthsMobile);
             });
-            updateButtons();
         }
 
         initProjectCarousel();

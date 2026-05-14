@@ -1167,13 +1167,18 @@ img {
 
     /* About Section */
     .about-area {
-        padding: 2.75rem 0.875rem;
+        padding: 2.75rem 0.35rem;
+    }
+
+    .about-area .container {
+        max-width: 100%;
+        padding: 0 0.25rem;
     }
 
     .about {
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding: 1.5rem;
+        padding: 1.35rem 0.85rem;
     }
 
     .about-content {
@@ -1275,7 +1280,7 @@ img {
 
     .project {
         padding: 1.5rem;
-        margin: 0 0.5rem;
+        margin: 0;
     }
 
     .project h4 {
@@ -1293,7 +1298,54 @@ img {
         word-break: break-word;
     }
 
-    /* Blog Section */
+    .project-carousel-wrapper {
+        gap: 0.3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        align-items: center;
+        row-gap: 0.65rem;
+        column-gap: 0.75rem;
+    }
+
+    .project-carousel-btn--prev {
+        grid-column: 1;
+        grid-row: 2;
+        justify-self: end;
+    }
+
+    .project-carousel {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        width: 100%;
+        min-width: 0;
+        scroll-padding-inline: 0;
+    }
+
+    .project-carousel-btn--next {
+        grid-column: 2;
+        grid-row: 2;
+        justify-self: start;
+    }
+
+    .project-carousel-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 0.8rem;
+        border-width: 1.5px;
+    }
+
+    .project-track {
+        gap: 0.75rem;
+    }
+
+    /* Width is set in JS from carousel.clientWidth so one card always fits the strip */
+    .project-track .project {
+        min-width: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
     .animations-area {
         padding: 3rem 1rem;
     }
@@ -1730,7 +1782,7 @@ html {
     }
     
     .textion {
-        margin-left: 0.5rem;
+        margin-left: 0;
     }
     
     .main-photo {
@@ -2077,6 +2129,16 @@ html {
         padding: 0 1rem;
     }
 
+    .project-content .container {
+        padding-left: 0.35rem;
+        padding-right: 0.35rem;
+    }
+
+    .project-content {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
     .education-content .title,
     .project-content .title,
     .publications-content .title,
@@ -2107,7 +2169,7 @@ html {
 
     .about,
     .vidtext {
-        padding: 1.5rem;
+        padding: 1.35rem 0.85rem;
     }
 }
 
