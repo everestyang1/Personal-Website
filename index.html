@@ -120,17 +120,11 @@
             border-radius: 4px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
         }
-        @media (max-width: 600px) {
-            td.biocell,
-            td.photocell {
-                display: block;
-                width: 100% !important;
-                max-width: 100% !important;
-                text-align: center;
-            }
-            td.photocell { padding-bottom: 0 !important; }
-            td.photocell img { max-width: 220px !important; }
-        }
+        /* Match the classic Jon Barron template: no mobile media queries.
+           Body text stays left-aligned (only the name and links row are
+           centered via inline styles). Publication thumbnails keep their
+           natural width so the image-beside-text rows read the same on a
+           phone as they do on the reference sites. */
     </style>
 </head>
 <body>
