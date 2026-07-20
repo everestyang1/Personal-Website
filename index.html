@@ -1,1097 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Everest Yang - Portfolio</title>
-        <link rel="icon" href="images/pfp.jpg">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" class="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Everest Yang">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Everest Yang</title>
+    <link rel="shortcut icon" href="images/pfp.jpg">
+    <style>
+        /* Lato v15 — embedded exactly as the Jon Barron / Tony Zhao template loads it */
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 400;
+            src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 400;
+            src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 700;
+            src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 700;
+            src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        a {
+            color: #1772d0;
+            text-decoration: none;
+        }
+        a:focus,
+        a:hover {
+            color: #f09228;
+            text-decoration: none;
+        }
+        body,
+        td,
+        th,
+        tr,
+        p,
+        a,
+        strong {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+        body {
+            margin: 8px 8px 4px;
+            background: #ffffff;
+        }
+        heading {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 22px;
+        }
+        papertitle {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        name {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 32px;
+        }
+        .cat {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 22px 0 6px;
+            text-decoration: underline;
+        }
+        .pubimg img {
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        @media (max-width: 600px) {
+            td.biocell,
+            td.photocell {
+                display: block;
+                width: 100% !important;
+                max-width: 100% !important;
+                text-align: center;
+            }
+            td.photocell { padding-bottom: 0 !important; }
+            td.photocell img { max-width: 220px !important; }
+        }
+    </style>
 </head>
 <body>
-    <div class="gradient-bg"></div>
-    <div class="particles"></div>
-    <div class="highlight-spots"></div>
 
-    <!-------------------------- Header Area -------------------------->
-    <header class="header-area">
-        <div class="container">
-            <div class="header">
-                <a href="#home" class="logo">Everest Yang</a>
-                <nav class="navbar">
-                    <div class="navbar-left">
-                        <a href="#about">About Me</a>
-                        <a href="#experience">Experience</a>
-                        <a href="#publications">Publications</a>
-                        <a href="#projects">Projects</a>
-                    </div>
-                </nav>
-                <div class="navbar-right">
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="hamburger-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </header>
+    <div style="height:20px;"></div>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay"></div>
-    <div class="mobile-menu">
-        <a href="#about">About Me</a>
-        <a href="#experience">Experience</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
+    <!-- ---------------- Header / Bio ---------------- -->
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tbody>
+            <tr style="padding:0px">
+                <td class="biocell" style="padding:2.5%;width:63%;vertical-align:middle">
+                    <p style="text-align:center">
+                        <name>Everest Yang</name>
+                    </p>
+                    <p>
+                        I am a CS student at Brown University, advised by Prof. <a href="https://cs.brown.edu/people/gdk/" target="_blank" rel="noopener">George Konidaris</a>.
+                        I was honored to receive the 2026 Barry M. Goldwater Scholarship.
+                    </p>
+                    <p>
+                        I also work with Prof. <a href="https://www.crr.columbia.edu/profile/igor-shuryak-md" target="_blank" rel="noopener">Igor Shuryak</a> at Columbia University Irving Medical Center
+                        on computational oncology. Previously, I interned at
+                        <a href="https://research.netflix.com/" target="_blank" rel="noopener">Netflix</a>,
+                        <a href="https://www.anduril.com/" target="_blank" rel="noopener">Anduril Industries</a>,
+                        <a href="https://www.zetasurgical.com/" target="_blank" rel="noopener">Zeta Surgical</a>,
+                        <a href="https://aws.amazon.com/" target="_blank" rel="noopener">AWS</a>, and
+                        <a href="https://www.nasa.gov/johnson/engineering/" target="_blank" rel="noopener">NASA</a>.
+                    </p>
+                    <p>
+                        I am broadly interested in robot manipulation, world models, and reinforcement learning.
+                        My research goal is to build general-purpose policies that enable robots to act robustly
+                        in the real world.
+                    </p>
+                    <p style="text-align:center">
+                        <a href="mailto:everest_yang@brown.edu">Email</a> &nbsp;/&nbsp;
+                        <a href="https://www.linkedin.com/in/everestyang/" target="_blank" rel="noopener">LinkedIn</a> &nbsp;/&nbsp;
+                        <a href="https://github.com/everestyang1" target="_blank" rel="noopener">GitHub</a> &nbsp;/&nbsp;
+                        <a href="https://scholar.google.com/citations?user=phthMvUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+                    </p>
+                </td>
+                <td class="photocell" style="padding:2.5%;width:37%;max-width:37%">
+                    <img style="width:100%;max-width:200px;object-fit:cover;border-radius:50%;display:block;margin:0 auto;" src="images/pfp.jpg" alt="Everest Yang">
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-    <script>
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.header-area');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+    <!-- ---------------- News ---------------- -->
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tbody>
+            <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                    <heading>News</heading>
+                    <p class="news">
+                        [Jul 2026] Excited to be joining <a href="https://research.netflix.com/" target="_blank" rel="noopener">Netflix Research</a> this fall<br>
+                        [Jun 2026] Two papers accepted to workshops at RSS (R-WM & DAROMA)<br>
+                        [May 2026] Honored to be named a <a href="https://www.brown.edu/news/2026-05-12/fellowships-goldwater-oxcam-knight-hennessy" target="_blank" rel="noopener">2026 Barry M. Goldwater Scholar</a><br>
+                        [May 2026] Started as an ML Engineer Intern at <a href="https://www.anduril.com/" target="_blank" rel="noopener">Anduril Industries</a><br>
+                        [Apr 2026] Our work on causal ML for gliomas was accepted to <em>Nature Scientific Reports</em>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-        // Hamburger menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger-menu');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+    <!-- ---------------- Publications ---------------- -->
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tbody>
+            <tr><td colspan="2" style="padding:20px 20px 0px 20px"><heading>Research</heading></td></tr>
 
-            hamburger.addEventListener('click', function() {
-                hamburger.classList.toggle('active');
-                mobileMenu.classList.toggle('active');
-                mobileOverlay.classList.toggle('active');
-            });
+            <tr><td colspan="2" style="padding:8px 20px 0px 20px"><p class="cat" style="margin:12px 0 2px">Robotics</p></td></tr>
 
-            // Close menu when clicking on overlay
-            mobileOverlay.addEventListener('click', function() {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                mobileOverlay.classList.remove('active');
-            });
+            <tr>
+                <td class="pubimg" style="padding:14px 14px 14px 20px;width:22%;vertical-align:middle">
+                    <a href="https://openreview.net/pdf?id=6GLn7p5QPX" target="_blank" rel="noopener"><img src="images/pub_changepoint.jpg" alt="Changepoint-Aware World Models" style="width:100%;max-width:100%"></a>
+                </td>
+                <td class="pubtxt" style="padding:14px 20px 14px 6px;vertical-align:middle">
+                    <a href="https://openreview.net/pdf?id=6GLn7p5QPX" target="_blank" rel="noopener"><papertitle>Changepoint-Aware World Models: Detecting Dynamics Shifts and Recovering by Forgetting Stale Replay in Model-Based RL</papertitle></a><br>
+                    <strong>E. Yang</strong>.<br>
+                    <em>RSS Workshop on Robot World Models (R-WM), 2026.</em>
+                </td>
+            </tr>
 
-            // Close menu when clicking on a link
-            const mobileLinks = document.querySelectorAll('.mobile-menu a');
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    mobileMenu.classList.remove('active');
-                    mobileOverlay.classList.remove('active');
-                });
-            });
+            <tr>
+                <td class="pubimg" style="padding:14px 14px 14px 20px;width:22%;vertical-align:middle">
+                    <a href="https://arxiv.org/pdf/2607.13479" target="_blank" rel="noopener"><img src="images/pub_topology.jpg" alt="Topology-Agnostic Mesh Reconstruction" style="width:100%;max-width:100%"></a>
+                </td>
+                <td class="pubtxt" style="padding:14px 20px 14px 6px;vertical-align:middle">
+                    <a href="https://arxiv.org/pdf/2607.13479" target="_blank" rel="noopener"><papertitle>Topology-Agnostic Mesh Reconstruction of Deformable Objects from Sparse Touch</papertitle></a><br>
+                    <strong>E. Yang</strong>.<br>
+                    <em>RSS Workshop on Deformable and Articulated Robotic Object Manipulation (DAROMA), 2026.</em>
+                </td>
+            </tr>
 
-            // Logo click: scroll to top and close mobile menu
-            const logo = document.querySelector('.logo');
-            if (logo) {
-                logo.addEventListener('click', () => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                    hamburger.classList.remove('active');
-                    mobileMenu.classList.remove('active');
-                    mobileOverlay.classList.remove('active');
-                });
-            }
-        });
-    </script>
-    <!-------------------------- Home Page -------------------------->
-    <section class="FirstElement" id="home">
-            <h1 class="hero-title typing-animation"></h1>
-            <div class="rotating-text">
-                <span class="hero-subtitle"></span>
-            </div>
-        <a href="#about" class="view-work-btn">View My Work</a>
-        <div class="social">
-            <a href="mailto:everest_yang@brown.edu" aria-label="Email"><i class="fa fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=phthMvUAAAAJ&hl=en" target="_blank" aria-label="Google Scholar"><i class="fa fa-graduation-cap"></i></a>
-            <a href="https://github.com/everestyang1" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/everestyang/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-    </section>
-    <!-------------------------- Home Script -------------------------->
-    <script>
-        // Typing animation function
-        function typeWriter(text, element, speed, callback) {
-            element.classList.add('typing');
-            let i = 0;
-            function type() {
-                if (i < text.length) {
-                    element.textContent += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                } else {
-                    // Remove typing animation but keep cursor blinking in fixed position
-                    element.classList.remove('typing');
-                    element.classList.add('cursor-blink');
-                    
-                    // Remove cursor after 1.5 seconds
-                    setTimeout(() => {
-                        element.classList.remove('cursor-blink');
-                        element.style.borderRight = 'none';
-                    }, 1500);
-                    
-                    if (callback) callback();
-                }
-            }
-            type();
-        }
+            <tr>
+                <td class="pubimg" style="padding:14px 14px 14px 20px;width:22%;vertical-align:middle">
+                    <a href="https://arxiv.org/pdf/2607.13475" target="_blank" rel="noopener"><img src="images/pub_deformable.jpg" alt="Deformable State Estimation" style="width:100%;max-width:100%"></a>
+                </td>
+                <td class="pubtxt" style="padding:14px 20px 14px 6px;vertical-align:middle">
+                    <a href="https://arxiv.org/pdf/2607.13475" target="_blank" rel="noopener"><papertitle>Deformable State Estimation for Autonomous Surgical Tissue Retraction Under Partial Observability</papertitle></a><br>
+                    <strong>E. Yang</strong>, S. Thompson, G.D. Konidaris.<br>
+                    <em>ICRA Workshop on Intelligent Robotic Assistants for Surgery (RASEI), 2026.</em>
+                </td>
+            </tr>
 
-        const titles = [
-            "CS & ML, Robotics, Venture @ Brown University",
-            "Intern @ Netflix, Anduril, Amazon (AWS), NASA, Zeta Surgical",
-            "Research @ Brown, Columbia Med, UCSD, UMass Boston",
-            "Aspiring Roboticist / Research Scientist"
+            <tr>
+                <td class="pubimg" style="padding:14px 14px 14px 20px;width:22%;vertical-align:middle">
+                    <a href="https://rss25-roboreps.github.io/papers/26_SkillWrapper_Autonomously_L.pdf" target="_blank" rel="noopener"><img src="images/pub_skillwrapper.jpg" alt="SkillWrapper" style="width:100%;max-width:100%"></a>
+                </td>
+                <td class="pubtxt" style="padding:14px 20px 14px 6px;vertical-align:middle">
+                    <a href="https://rss25-roboreps.github.io/papers/26_SkillWrapper_Autonomously_L.pdf" target="_blank" rel="noopener"><papertitle>SkillWrapper: Autonomously Learning Interpretable Skill Abstractions with Foundation Models</papertitle></a><br>
+                    Z. Yang, B. Hedegaard, A. Jaafar, S. Thompson, Y. Wei, <strong>E. Yang</strong>, H. Fu, S.S. Raman, S. Tellex, G. Konidaris, D. Paulius, N. Shah.<br>
+                    <em>RSS Workshop on Learned Robot Representations (RoboReps), 2025.</em>
+                </td>
+            </tr>
 
-        ];
+            <tr><td colspan="2" style="padding:8px 20px 0px 20px"><p class="cat" style="margin:16px 0 2px">Other Topics</p></td></tr>
 
-        let currentIndex = 0;
-        const nameElement = document.querySelector('.hero-title');
-        const subtitleElement = document.querySelector('.hero-subtitle');
+            <tr>
+                <td class="pubimg" style="padding:14px 14px 14px 20px;width:22%;vertical-align:middle">
+                    <a href="https://www.nature.com/articles/s41598-026-54656-0" target="_blank" rel="noopener"><img src="images/pub_gliomas.jpg" alt="Causal ML for gliomas" style="width:100%;max-width:100%"></a>
+                </td>
+                <td class="pubtxt" style="padding:14px 20px 14px 6px;vertical-align:middle">
+                    <a href="https://www.nature.com/articles/s41598-026-54656-0" target="_blank" rel="noopener"><papertitle>Estimating Temporal Treatment-Effect Patterns of Radiotherapy and Chemotherapy in Lower-Grade Gliomas Using Causal ML</papertitle></a><br>
+                    <strong>E. Yang</strong>, S. Agrawal, C.J. Kinslow, S.K. Cheng, L. Yang, E. Wang, T.J. Wang, L.A. Kachnic, D.J. Brenner, I. Shuryak.<br>
+                    <em>Nature Scientific Reports, 2026.</em>
+                </td>
+            </tr>
 
-        function updateText() {
-            currentIndex = (currentIndex + 1) % titles.length;
-            subtitleElement.textContent = titles[currentIndex];
-            subtitleElement.classList.remove('visible');
-            setTimeout(() => {
-                subtitleElement.classList.add('visible');
-            }, 100);
-        }
+            <tr>
+                <td class="pubimg" style="padding:14px 14px 14px 20px;width:22%;vertical-align:middle">
+                    <a href="https://arxiv.org/pdf/2505.06367" target="_blank" rel="noopener"><img src="images/pub_cast.jpg" alt="CAST" style="width:100%;max-width:100%"></a>
+                </td>
+                <td class="pubtxt" style="padding:14px 20px 14px 6px;vertical-align:middle">
+                    <a href="https://arxiv.org/pdf/2505.06367" target="_blank" rel="noopener"><papertitle>CAST: Time-Varying Treatment Effects with Application to Chemotherapy and Radiotherapy on Head and Neck Squamous Cell Carcinoma</papertitle></a><br>
+                    <strong>E. Yang</strong>, R. Vasishtha, L.K. Dad, L.A. Kachnic, A. Hope, E. Wang, X. Wu, Y. Yuan, D.J. Brenner, I. Shuryak.<br>
+                    <em>ACM-BCB, 2026. Also at 3 NeurIPS Workshops (AI4Science, CauScien, TS4H), 2025.</em>
+                </td>
+            </tr>
 
-        window.addEventListener('load', () => {
-            // Show first subtitle 1 second after typing starts
-            setTimeout(() => {
-                subtitleElement.textContent = titles[0];
-                subtitleElement.classList.add('visible');
-            }, 1000);
-            
-            typeWriter("Everest Yang", nameElement, 100, () => {
-                // Wait for cursor to finish blinking before starting rotation
-                setTimeout(() => {
-                    updateText();
-                    setInterval(updateText, 3500);
-                }, 2500);
-            });
-        });
+            <tr>
+                <td class="pubimg" style="padding:14px 14px 14px 20px;width:22%;vertical-align:middle">
+                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10850420" target="_blank" rel="noopener"><img src="images/pub_nasa.jpg" alt="ISS Wi-Fi survey by Astrobee" style="width:100%;max-width:100%"></a>
+                </td>
+                <td class="pubtxt" style="padding:14px 20px 14px 6px;vertical-align:middle">
+                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10850420" target="_blank" rel="noopener"><papertitle>Wi-Fi Signal Survey of the International Space Station by Autonomous Free-Flying Robot</papertitle></a><br>
+                    <strong>E. Yang</strong>, S.U. Hwu, C. Lansdowne, J.P. Boster, K. deSilva.<br>
+                    <em>IEEE WiSEE / Featured on NASA Homepage, 2024.</em>
+                </td>
+            </tr>
 
-        // Add scroll interaction for gradient text
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const name = document.querySelector('.hero-title');
-            
-            // Update gradient position based on scroll
-            name.style.backgroundPosition = `${scrolled * 0.5}% 50%`;
-        });
+            <tr>
+                <td colspan="2" style="padding:20px 20px 2px 20px">
+                    <p style="text-align:right;font-size:12px;color:#888;margin:0">
+                        <a href="https://github.com/jonbarron/jonbarron.github.io" target="_blank" rel="noopener">Website template from Jon Barron</a>.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-        // Add text reveal animation on load
-        document.addEventListener('DOMContentLoaded', () => {
-            const elements = document.querySelectorAll('.reveal-text');
-            elements.forEach((el, index) => {
-                el.style.animationDelay = `${index * 0.2}s`;
-                el.style.opacity = '1'; // Ensure elements become visible
-            });
-        });
+    <div style="height:80px;"></div>
 
-        // Existing scroll position check
-        function checkScrollPosition() {
-            var firstElement = document.querySelector('.FirstElement');
-            var topOfElement = firstElement.getBoundingClientRect().top;
-            
-            if (topOfElement < window.innerHeight && topOfElement > 0) {
-                firstElement.classList.add('visible');
-            } else {
-                firstElement.classList.remove('visible');
-            }
-        }
-
-        window.addEventListener('scroll', checkScrollPosition);
-        checkScrollPosition(); // run on load
-    </script>
-    <!-------------------------- About Section -------------------------->
-    <section class="about-area" id="about">
-        <div class="container">
-            <h3 class="title">About Me</h3>
-            <div class="about">
-        <div class="about-content">
-                    <div class="textion">
-                        <p>
-                            Hi, my name is Everest Yang, and I'm from Lexington, MA. I'm a Computer Science student at Brown University and a <a href="https://www.brown.edu/news/2026-05-12/fellowships-goldwater-oxcam-knight-hennessy" target="_blank" rel="noopener noreferrer">2026 Barry M. Goldwater Scholar</a>!
-                        </p>
-                        <p>
-                            I'm also an incoming MLE Intern at <a href="https://www.anduril.com/" target="_blank" rel="noopener noreferrer">Anduril Industries</a> and incoming Research Intern at <a href="https://research.netflix.com/" target="_blank" rel="noopener noreferrer">Netflix</a>. My interests range from Deep Learning to Robotics, Oncology, and more.
-                        </p>
-                        <!-- After graduating, I am planning to pursue a PhD in CS/Robotics.  -->
-                        <p>
-                            Previously, I interned at <a href="https://www.zetasurgical.com/" target="_blank" rel="noopener noreferrer">Zeta Surgical</a>, a Series A startup focused on neurosurgical robotics. In my internship at <a href="https://aws.amazon.com/bedrock/?trk=7ecf60df-6136-414c-a7c3-6aa4d2d6019f&amp;sc_channel=ps&amp;trk=c3974822-373e-499b-9739-834a50722377&amp;sc_channel=ps&amp;ef_id=CjwKCAjwwpDQBhAuEiwAa-4WoyDk_CsBtuXBsXuZ-Lk5QZeAnxvUKWRBGP4FFqaIrl0kfQeX1S-EBhoCqt0QAvD_BwE:G:s&amp;s_kwcid=AL!4422!3!795877020842!e!!g!!aws%20bedrock!23532472972!194311072004&amp;gad_campaignid=23532472972&amp;gbraid=0AAAAADjHtp9eZyzTZP0dnbIbN3mdo2kAr&amp;gclid=CjwKCAjwwpDQBhAuEiwAa-4WoyDk_CsBtuXBsXuZ-Lk5QZeAnxvUKWRBGP4FFqaIrl0kfQeX1S-EBhoCqt0QAvD_BwE" target="_blank" rel="noopener noreferrer">AWS</a>, I worked on Bedrock ML Infra. At <a href="https://www.nasa.gov/johnson/engineering/" target="_blank" rel="noopener noreferrer">NASA</a>, I worked on Lunar Wi-Fi Avionics and ISS Astrobee Research.
-                        </p>
-                        <p>
-                            In my free time, I enjoy playing tennis, hiking, and watching movies!
-                        </p>
-                        <p>
-                            <em>Website Last Updated: 5/13/26</em>
-                        </p>
-                    </div>
-                </div>
-            <div class="about-photo">
-                <img src="images/everest.jpg" alt="Everest Yang Portrait" class="main-photo" />
-                <div class="smaller-photos">
-
-                    <div class="smaller-photo-container">
-                            <img src="images\zeta-setup.jpg" alt="Zeta Surgical TMS Robot Platform" class="smaller-photo">
-                        <p class="photo-caption">Zeta</p>
-                    </div>
-                
-                    <div class="smaller-photo-container">
-                            <img src="images\aws-pic.jpg" alt="My intern group with the AWS logo" class="smaller-photo">
-                        <p class="photo-caption">AWS</p>
-                    </div>
-
-                    <div class="smaller-photo-container">
-                            <img src="images/IMG_3567.jpg" alt="My intern partner Kim and I with NASA's humanoid, Valkyrie" class="smaller-photo">
-                        <p class="photo-caption">NASA</p>
-                    </div>
-
-                    
-                </div>
-                <div class="photo-indicators">
-                    <div class="photo-indicator active"></div>
-                    <div class="photo-indicator"></div>
-                    <div class="photo-indicator"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-------------------------- Experience Section -------------------------->
-    <section class="education-content" id="experience">
-        <div class="container">
-            <h3 class="title">Experience</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-logo small">
-                        <img src="images/anduril.png" alt="Anduril Industries Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Anduril Industries</h3>
-                        <h4 class="timeline-subtitle">Machine Learning Engineer Intern</h4>
-                        <div class="timeline-header">
-                            <p class="timeline-date"><i class="fa fa-calendar"></i> May 2026 - Aug 2026</p>
-                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">Costa Mesa,&#8204; CA</span></p>
-                        </div>
-                        <div class="timeline-description">
-                            <p>• Incoming Summer 2026</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-logo small">
-                        <img src="images/netflix.png" alt="Netflix Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Netflix Research</h3>
-                        <h4 class="timeline-subtitle">Research Scientist Intern</h4>
-                        <div class="timeline-header">
-                            <p class="timeline-date"><i class="fa fa-calendar"></i> Aug 2026 - Dec 2026</p>
-                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">Los Gatos,&#8204; CA</span></p>
-                        </div>
-                        <div class="timeline-description">
-                            <p>• Incoming Fall 2026 under Dr. Natali Ruchansky</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-logo">
-                        <img src="images/brown.jfif" alt="Brown Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Brown University, Intelligent Robot Lab</h3>
-                        <h4 class="timeline-subtitle">Undergraduate Researcher</h4>
-                        <div class="timeline-header">
-                            <p class="timeline-date"><i class="fa fa-calendar"></i> Sep 2024 - Present</p>
-                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">Providence,&#8204; RI</span></p>
-            </div>
-                        <div class="timeline-description">
-                            <p>• Conducting DL/Diffusion/CV research in the Intelligent Robot Lab under Prof. George Konidaris</p>
-                            <p>• Built an active learning framework using LLMs/VLMs to autonomously learn symbolic abstractions, enabling zero-shot task planning with PDDL-style operators; Co-Authored <a href="https://rss25-roboreps.github.io/papers/26_SkillWrapper_Autonomously_L.pdf" target="_blank">RSS RoboReps Workshop Paper</a></p>
-                            <p>• Senior Honors Thesis: Deformable State Estimation for Surgical Tissue Retraction; First Author ICRA RASEI Workshop Paper</p>
-            </div>
-        </div>
-            </div>
-                <div class="timeline-item">
-                    <div class="timeline-logo small">
-                        <img src="images/CUMed.jfif" alt="Columbia Med Logo">
-            </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Columbia University Irving Medical Center</h3>
-                        <h4 class="timeline-subtitle">Undergraduate Researcher</h4>
-                        <div class="timeline-header">
-                            <p class="timeline-date"><i class="fa fa-calendar"></i> Mar 2024 - Present</p>
-                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">Manhattan,&#8204; NY</span></p>
-        </div>
-                        <div class="timeline-description">
-                            <p>• Conducted Computational Oncology research (HNSCC & Gliomas) in the Center for Radiological Research under Prof. Igor Shurak</p>
-                            <p>• Developed CAST, a novel ML framework for causal survival forests to model time-varying treatment effects across medical interventions</p>
-                            <p>• First Author at <a href="https://arxiv.org/pdf/2505.06367" target="_blank">3 NeurIPS Workshops</a> + 8 First/Second Author Posters at International Oncology Venues including: <a href="https://www.redjournal.org/article/S0360-3016(25)02970-0/fulltext" target="_blank">International Journal of Radiation Oncology • Biology • Physics</a>, <a href="https://drive.google.com/file/d/1Zg7A4Jm3wZc4FrCw9ndnH42AGs2CDw3U/view?usp=sharing" target="_blank">ASTRO</a>, Gilbert W. Beebe Symposium, etc.</p>
-            </div>
-            </div>
-        </div>
-                <div class="timeline-item hidden-experience">
-                    <div class="timeline-logo small">
-                        <img src="images/pear.png" alt="Pear VC Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Pear VC</h3>
-                        <h4 class="timeline-subtitle">Venture Fellow</h4>
-                        <div class="timeline-header">
-                            <p class="timeline-date"><i class="fa fa-calendar"></i> Aug 2025 - Present</p>
-                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">San Francisco,&#8204; CA</span></p>
-                        </div>
-                        <div class="timeline-description">
-                            <p>• Startup Sourcing & Diligence - Reach Out! (First Pear Fellow from Brown) </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item hidden-experience">
-                    <div class="timeline-logo small">
-                        <img src="images/8vc.jpg" alt="8VC Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">8VC</h3>
-                        <h4 class="timeline-subtitle">Engineering Fellow</h4>
-                        <div class="timeline-header">
-                            <p class="timeline-date"><i class="fa fa-calendar"></i> May 2026 - Aug 2026</p>
-                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">Austin,&#8204; TX</span></p>
-                        </div>
-                        <div class="timeline-description">
-                            <p>• Incoming Summer 2026 (First 8VC Fellow accepted in Cohort)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item hidden-experience">
-                    <div class="timeline-logo small">
-                        <img src="images/csdug.jpg" alt="Brown CS DUG Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Brown CS DUG</h3>
-                        <h4 class="timeline-subtitle">CS Undergraduate President</h4>
-                        <div class="timeline-header">
-                            <p class="timeline-date"><i class="fa fa-calendar"></i> Sep 2024 - Present</p>
-                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">Providence,&#8204; RI</span></p>
-                        </div>
-                        <div class="timeline-description">
-                            <p>• Leading Brown's CS Departmental Undergraduate Group (CS DUG)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item hidden-experience">
-                    <div class="timeline-logo small">
-                        <img src="images/browncs.png" alt="Brown Computer Science Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Brown Computer Science</h3>
-                        <h4 class="timeline-subtitle">Undergraduate Teaching Assistant</h4>
-                        <div class="timeline-header">
-                            <p class="timeline-date"><i class="fa fa-calendar"></i> Jan 2026 - Present</p>
-                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">Providence,&#8204; RI</span></p>
-                        </div>
-                        <div class="timeline-description">
-                            <p>• CSCI 1420: Machine Learning (Spring 2026)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item hidden-experience">
-                    <div class="timeline-logo small">
-                        <img src="images/fablogo.jpg" alt="Founders @ Brown Logo" class="timeline-logo-cover">
-                    </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Founders @ Brown</h3>
-                        <h4 class="timeline-subtitle">President, Co-Founder</h4>
-                        <div class="timeline-header">
-                            <p class="timeline-date"><i class="fa fa-calendar"></i> Sep 2025 - Present</p>
-                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">Providence,&#8204; RI</span></p>
-                        </div>
-                        <div class="timeline-description">
-                            <p>• Cultivating a community of Brown's best builders & investors (<a href="https://foundersatbrown.github.io" target="_blank" rel="noopener noreferrer">foundersatbrown.github.io</a>)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item hidden-experience">
-                    <div class="timeline-logo small">
-                        <img src="images/zeta-logo.png" alt="Zeta Surgical Logo">
-            </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Zeta Surgical (Series A, YC S19)</h3>
-                        <h4 class="timeline-subtitle">Software Engineer Intern</h4>
-                        <div class="timeline-header">
-                            <p class="timeline-date"><i class="fa fa-calendar"></i> Sep 2025 - Mar 2026</p>
-                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">Boston,&#8204; MA</span></p>
-        </div>
-                        <div class="timeline-description">
-                            <p>• Developed C++ modules for XR neurosurgical robotics, enhancing real-time alignment between imaging data and patient anatomy</p>
-                            <p>• Built focused ultrasound algorithms to enable transcranial targeting through skull models (GPU-accelerated k-Wave simulations)</p>
-                            <p>• Optimized control loops of Zeta’s robotics platform, reducing latency and improving responsiveness during image-guided procedures - [Received Full-Time Return Offer]</p>
-            </div>
-            </div>
-        </div>
-                <div class="timeline-item hidden-experience">
-                    <div class="timeline-logo small">
-                        <img src="images/awslogo.png" alt="AWS Logo">
-            </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Amazon Web Services</h3>
-                        <h4 class="timeline-subtitle">Software Engineer Intern</h4>
-                        <div class="timeline-header">
-                            <p class="timeline-date"><i class="fa fa-calendar"></i> May 2025 - Aug 2025</p>
-                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">Seattle,&#8204; WA</span></p>
-            </div>
-                        <div class="timeline-description">
-                            <p>• Developed Generative AI applications with automated ingestion, transformation, and querying of operational data using AWS S3, Lambda, Glue, Athena, and OpenSearch</p>
-                            <p>• Built Retrieval-Augmented Generation (RAG) architecture integrating AWS Bedrock to support natural language queries across structured and unstructured enterprise data</p>
-                            <p>• <u>[Recieved Full-Time Return Offer]</u> & 4x AWS Certified</p>
-            </div>
-        </div>
-            </div>
-                <div class="timeline-item hidden-experience">
-                    <div class="timeline-logo">
-                        <img src="images/nasa.png" alt="NASA Logo">
-            </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">NASA Johnson Space Center</h3>
-                        <h4 class="timeline-subtitle">Research Engineer Intern</h4>
-                        <div class="timeline-header">
-                            <p class="timeline-date"><i class="fa fa-calendar"></i> Jun 2024 - Aug 2024</p>
-                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">Houston,&#8204; TX</span></p>
-        </div>
-                        <div class="timeline-description">
-                            <p>• Conducted Antenna Data Science research on Wi-Fi signal propagation for pressurized spacecraft; used ISS signal surveys from <a href="https://www.nasa.gov/astrobee/" target="_blank">Astrobee</a>, NASA's autonomous free-flying robot</p>
-                            <p>• First Author <a href="https://drive.google.com/file/d/1_ISu4dIZnXh1lFVO780XecisLi8kc66k/view?usp=sharing" target="_blank">NASA publication in IEEE WiSEE</a>; research used for future missions such as the Artemis program, Lunar Gateway, Orbital Reef; $1.5k award from NASA Rhode Island Space Grant</p>
-                            <p>• Spearheaded Python/Bash scripts for KPI network monitoring of Lunar Wi-Fi and 3GPP (GPS tracking, TCP/UDP/RSSI). <a href="https://drive.google.com/file/d/1wp54YP2gWySsvn0DzzKWsLCUS2kjuqvz/view?usp=sharing" target="_blank">Presented to Division Chief</a> - <u>[Received Return Offer to any NASA Space Center]</u></p>
-        </div>
-                    </div>
-                </div>
-                <div class="timeline-item hidden-experience">
-                    <div class="timeline-logo small">
-                        <img src="images/ucsd.png" alt="UCSD Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">UC San Diego, NeuroML Lab</h3>
-                        <h4 class="timeline-subtitle">Undergraduate Researcher</h4>
-                        <div class="timeline-header">
-                            <p class="timeline-date"><i class="fa fa-calendar"></i> Jan 2024 - Aug 2024</p>
-                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">San Diego,&#8204; CA</span></p>
-                </div>
-                        <div class="timeline-description">
-                            <p>• Conducted Computational Neuroscience research under Professor Meenakshi Khosla: Built PyTorch-based Deep Neural Network framework for auditory recognition tasks to better understand AI explainability</p>
-                            <p>• Processed 100 GB of raw audio stimuli/data to analyze specific trends and developed Deep Learning algorithms directly with PI</p>
-                            <p>• Unfortunately, I had to leave the lab because of transferring to Brown, but I had a great time and passed off my project to another student!</p>
-            </div>
-                    </div>
-                </div>
-                <div class="timeline-item hidden-experience">
-                    <div class="timeline-logo">
-                        <img src="images/lyst.png" alt="LYST Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Lexington Youth STEM Team</h3>
-                        <h4 class="timeline-subtitle">Co-Founder & Team Lead</h4>
-                        <div class="timeline-header">
-                            <p class="timeline-date"><i class="fa fa-calendar"></i> Sep 2020 - Jun 2023</p>
-                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">Lexington,&#8204; MA</span></p>
-                </div>
-                        <div class="timeline-description">
-                            <p>• Co-founded 501(c)(3) nonprofit organization that built coding projects for the community during COVID-19</p>
-                            <p>• Recognition from Town Government, School Superintendent, and published in Local Newspaper; Won Gold Civic Leadership Academy Award + 2x Gold Presidential Volunteer Service Award</p>
-                            <p>• Mentored younger teammates on advanced coding techniques; scaled team to 50+ members today (<a href="https://youthsteaminitiative.org/" target="_blank">lexyouthstem.org</a>)</p>
-            </div>
-                    </div>
-                </div>
-                <div class="timeline-item hidden-experience">
-                    <div class="timeline-logo">
-                        <img src="images/umassboston.jpg" alt="UMass Boston Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">UMass Boston, Knowledge Discovery Lab</h3>
-                        <h4 class="timeline-subtitle">High School Researcher</h4>
-                        <div class="timeline-header">
-                            <p class="timeline-date"><i class="fa fa-calendar"></i> Aug 2020 - Sept 2023</p>
-                            <p class="timeline-location"><i class="fa fa-map-marker-alt"></i><span class="no-map-link">Boston,&#8204; MA</span></p>
-                </div>
-                        <div class="timeline-description">
-                            <p>• Conducted Time Series Machine Learning research under Dr. Yong Zhuang: Built ARIMA models to forecast river streamflow, a key indicator of flooding</p>
-                            <p>• Analyzed Ganges River dataset measured in Q (m3/s) discharge volume. Plotted streamflow Log Volume using ADF tests and KL Divergence</p>
-                            <p>• First Author Publication in <a href="https://www.jsr.org/hs/index.php/path/article/view/3072/1392" target="_blank">Journal of Student Research</a> (peer-reviewed and open-access)</p>
-            </div>
-                    </div>
-                </div>
-            </div>
-            <div class="see-more-container">
-                <button class="see-more-btn" id="seeMoreBtn">See More Experiences</button>
-            </div>
-        </div>
-    </section>
-    <!-------------------------- Experience Script -------------------------->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            
-            // See More Experiences functionality
-            const seeMoreBtn = document.getElementById('seeMoreBtn');
-            const hiddenExperiences = document.querySelectorAll('.hidden-experience');
-            let experiencesShown = false;
-
-            if (seeMoreBtn) {
-                seeMoreBtn.addEventListener('click', function() {
-                    if (!experiencesShown) {
-                        // Show hidden experiences with smooth unified animation
-                        hiddenExperiences.forEach((experience) => {
-                            experience.classList.add('show');
-                        });
-                        seeMoreBtn.textContent = 'See Less Experiences';
-                        experiencesShown = true;
-                    } else {
-                        // Hide experiences
-                        hiddenExperiences.forEach((experience) => {
-                            experience.classList.remove('show');
-                        });
-                        seeMoreBtn.textContent = 'See More Experiences';
-                        experiencesShown = false;
-                    }
-                });
-            }
-            
-            function checkScrollPosition(element) {
-                var topOfElement = element.getBoundingClientRect().top;
-                var bottomOfElement = element.getBoundingClientRect().bottom;
-    
-                if (topOfElement <= window.innerHeight && bottomOfElement > 0) {
-                    element.classList.add('visible'); 
-                } else {
-                    element.classList.remove('visible'); 
-                }
-            }
-
-            function checkScrollTop() {
-                if (window.scrollY === 0){
-                    console.log("Scrolled to top, hiding images");
-                    firstElement.classList.remove('visible');
-                    secondElement.classList.remove('visible');
-                }
-            }
-    
-            var firstElement = document.querySelector('.indpic'); 
-            var secondElement = document.querySelector('.grouppic');  
-            console.log(firstElement); 
-            console.log(secondElement);  
-    
-            function handleScroll() {
-                checkScrollTop();
-                checkScrollPosition(firstElement);  
-                checkScrollPosition(secondElement); 
-            }
-    
-            firstElement.classList.remove('visible');
-            secondElement.classList.remove('visible');
-    
-            window.addEventListener('scroll', handleScroll);
-
-        });
-    </script>
-
-    <!-------------------------- Publications & Conferences Section -------------------------->
-    <section class="publications-content" id="publications">
-        <div class="container">
-            <h3 class="title">Publications & Conferences</h3>
-            <div class="publications-list">
-                <ol class="publications-ol">
-                    <li class="publication-item"><strong>E. Yang</strong>, R. Vasishtha, L.K. Dad, L.A. Kachnic, A. Hope, E. Wang, X. Wu, Y. Yuan, D.J. Brenner, I. Shuryak. <em>"CAST: Time-Varying Treatment Effects with Application to Chemotherapy and Radiotherapy on Head and Neck Squamous Cell Carcinoma."</em> <span class="pub-details">3 NeurIPS Workshops: 1) AI for Science, 2) CauScien: Uncovering Causality in Science, 3) Learning from Time-Series for Health, 2025. <a href="https://arxiv.org/pdf/2505.06367" target="_blank" rel="noopener">Publication</a> | <a href="https://neurips.cc/virtual/2025/loc/san-diego/124098" target="_blank" rel="noopener">Program</a> | <a href="https://drive.google.com/file/d/1udBxmloxQW8FjaoFJ-_IXmXkAU1ObGuE/view" target="_blank" rel="noopener">Poster</a></span></li>
-                    <li class="publication-item"><strong>E. Yang</strong>, S. Thompson, G.D. Konidaris. <em>"Deformable State Estimation for Autonomous Surgical Tissue Retraction Under Partial Observability."</em> <span class="pub-details">ICRA Workshop on Embracing Intelligent Robotic Assistants for Surgery in the Era of Embodied Intelligence (RASEI), 2026.</span></li>
-                    <li class="publication-item"><strong>E. Yang</strong>, S.U. Hwu, C. Lansdowne, J.P. Boster, K. deSilva. <em>"Wi-Fi Signal Propagation of the International Space Station by Autonomous Free-Flying Robot."</em> <span class="pub-details">IEEE International Conference on Wireless for Space and Extreme Environments (WiSEE), 2024. <a href="https://drive.google.com/file/d/1_ISu4dIZnXh1lFVO780XecisLi8kc66k/view?usp=sharing" target="_blank" rel="noopener">Publication</a></span></li>
-                    <li class="publication-item"><strong>E. Yang</strong>, S. Agarwal, C.J. Kinslow, S.K. Cheng, E. Wang, L. Yang, T.J. Wang, L.A. Kachnic, D.J. Brenner, I. Shuryak. <em>"Temporal dynamics of radiotherapy and chemotherapy response in lower-grade gliomas using causal machine learning"</em> <span class="pub-details"><a href="https://www.medrxiv.org/content/10.64898/2026.02.28.26347288v1" target="_blank" rel="noopener">Under review</a>, 2025.</span><br><span class="pub-details"><strong>Also presented at: (First Author for all)</strong></span>
-                        <ul class="pub-sub-list">
-                            <li>University of Texas Medical Branch (UTMB), Department of Radiation Oncology, 2026</li>
-                            <li>AI Precision Health Institute (AIPHI) Affinity Group, University of Hawaii Cancer Center, 2026</li>
-                            <li>NIHR Maudsley Biomedical Research Centre, King's College London, 2026</li>
-                        </ul>
-                    </li>
-                    <li class="publication-item">I. Shuryak, <strong>E. Yang</strong>, R. Vasishtha, A. Hope, E. Wang, X. Wu, Y. Yuan, D.J. Brenner, L.A. Kachnic, L.K. Dad. <em>"Integrating Mechanistic and Machine Learning Models to Assess Radiotherapy Fractionation Impact on HNSCC Patient Survival."</em> <span class="pub-details">International Journal of Radiation Oncology • Biology • Physics (IJROBP), 2025. <a href="https://www.redjournal.org/article/S0360-3016(25)02970-0/fulltext" target="_blank" rel="noopener">Publication</a></span><br><span class="pub-details"><strong>Also presented at: (First/Second Author for all)</strong></span>
-                        <ul class="pub-sub-list">
-                            <li>American Society for Radiation Oncology (ASTRO) Annual Meeting, 2025. <a href="https://drive.google.com/file/d/1Zg7A4Jm3wZc4FrCw9ndnH42AGs2CDw3U/view?usp=sharing" target="_blank" rel="noopener">Poster</a></li>
-                            <li>Gilbert W. Beebe Symposium on AI & ML in Radiation Therapy, 2025</li>
-                            <li>Invited ML Therapeutic Radiology Talk, Yale School of Medicine, 2025</li>
-                            <li>Night Science Workshop: Causal Inference & Reinforcement Learning, 2025</li>
-                        </ul>
-                    </li>
-                    <li class="publication-item">S. Nourji<sup>*</sup>, T. Subramanian<sup>*</sup>, S. Pakala<sup>*</sup>, <strong>E. Yang</strong><sup>*</sup>. <em>"Evaluating Convolutional Neural Networks for Synthetic Image Detection in the Frequency Domain."</em> <span class="pub-details">IEEE International Conference on AI and Data Analytics (ICAD), 2025. <strong>(* indicates Co-First Author)</strong> <a href="https://ieeexplore.ieee.org/abstract/document/11114037" target="_blank" rel="noopener">Publication</a></span></li>
-                    <li class="publication-item">Z. Yang, B. Hedegaard, A. Jaafar, S. Thompson, Y. Wei, <strong>E. Yang</strong>, H. Fu, S.S. Raman, S. Tellex, G. Konidaris, D. Paulius, N. Shah. <em>"SkillWrapper: Autonomously Learning Interpretable Skill Abstractions with Foundation Models."</em> <span class="pub-details">RSS Workshop on Learned Robot Representations (RoboReps), 2025. <a href="https://rss25-roboreps.github.io/papers/26_SkillWrapper_Autonomously_L.pdf" target="_blank" rel="noopener">Publication</a></span></li>
-                    <li class="publication-item"><strong>E. Yang</strong>, Y. Zhuang. <em>"Predicting Flood Streamflow with Auto Regressive Integrated Moving Average Models."</em> <span class="pub-details">Journal of Student Research, 2022. <a href="https://www.jsr.org/hs/index.php/path/article/view/3072/1392" target="_blank" rel="noopener">Publication</a></span></li>
-                </ol>
-            </div>
-        </div>
-    </section>
-    
-    <!-------------------------- Projects Section -------------------------->
-    <section class="project-content" id="projects">
-        <div class="container">
-            <h3 class="title">Projects</h3>
-            <div class="project-carousel-wrapper">
-                <button type="button" class="project-carousel-btn project-carousel-btn--prev" aria-label="Previous projects">
-                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
-                </button>
-                <div class="project-carousel">
-                    <div class="project-track">
-                        <div class="project">
-                        <i class="fas fa-satellite"></i>
-                        <h4>Perovskite Visuals and Degradation eXperiment</h4>
-                        <p>Building Embedded Operating System in C for PVDX, Brown's 3U-CubeSat under NASA ELaNa program, designed to test next-gen perovskite solar cells in harsh orbital environments</p>
-                        <div class="project-links">
-                            <a href="https://www.brown.edu/news/2021-04-21/cubesat" class="project-link" target="_blank" rel="noopener">
-                                <i class="fas fa-file-alt"></i>
-                                PVDX Article
-                            </a>
-                        </div>
-                        </div>
-                        <div class="project">
-                        <i class="fas fa-eye"></i>
-                        <h4>Fourier Transform Features for Detection of AI-Generated Images</h4>
-                        <p>Developed TensorFlow CNN architectures incorporating Fourier Transform features to enhance detection of AI-generated images</p>
-                        <div class="project-links">
-                            <a href="https://ieeexplore.ieee.org/abstract/document/11114037" class="project-link" target="_blank">
-                                <i class="fas fa-file-alt"></i>
-                                IEEE ICAD Publication
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <i class="fas fa-robot"></i>
-                        <h4>Interpreting Contrastive RL in Goal-Conditioned Environments</h4>
-                        <p>Contrastive RL in MiniGrid: Learn goal-reaching behavior without explicit reward shaping; Interpretability studies and ablation experiments included</p>
-                        <div class="project-links">
-                            <a href="https://drive.google.com/file/d/1G7rDfKGYQ6kYJZ0hKEWla1YIjPE_VRpd/view?usp=sharing" class="project-link" target="_blank">
-                                <i class="fas fa-file-alt"></i>
-                                CS2470: (Grad) Deep Learning Final Project Report
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <i class="fas fa-lock"></i>
-                        <h4>Double Ratchet: Symmetric-Key Ratchet Extension for Signal</h4>
-                        <p>Secure messaging protocol with per-message forward secrecy, skipped-message recovery, TTL-based skipped-key eviction, and bounded cache enforcement.</p>
-                        <div class="project-links">
-                            <a href="https://drive.google.com/file/d/1zLsk4DzyXprmS-RNbRArDT44Cg4T5sZr/view?usp=sharing" class="project-link" target="_blank">
-                                <i class="fas fa-file-alt"></i>
-                                CS1515: Applied Cryptography Final Project Report
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <i class="fas fa-wave-square"></i>
-                        <h4>EOG CrazyFlie Robotic Flight Patterns</h4>
-                        <p>Classifies electrooculography (EOG) signals into cognitive states and maps them to Crazyflie drone swarm flight patterns</p>
-                        <div class="project-links">
-                            <a href="https://drive.google.com/file/d/1pc54JzpnQt4kLfyDezVnk0U0VrRdtMJl/view?usp=sharing" class="project-link" target="_blank" rel="noopener">
-                                <i class="fas fa-file-alt"></i>
-                                CS1952Z: Robots as a Medium Final Project Report
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <i class="fas fa-database"></i>
-                        <h4>Multi-Threaded Database Server</h4>
-                        <p>Multi-threaded server in C using TCP to manage concurrent client connections and facilitate interaction with a shared key-value database</p>
-                    </div>
-                    <div class="project">
-                        <i class="fas fa-microphone"></i>
-                        <h4>Audio ML Language Classifier</h4>
-                        <p>Utilized PyTorch to design CNN that processes speech data and outputs user language. Converted audio files to a Mel Spectrogram and utilized librosa to run it through the CNN for image analysis</p>
-                    </div>
-                    <div class="project">
-                        <i class="fas fa-bus"></i>
-                        <h4>Public Transport Geospatial Analysis</h4>
-                        <p>Created EDA visualizations of the discrepancy between transportation systems and their CO2 emissions using Python and Data Science techniques</p>
-                        <div class="project-links">
-                            <a href="https://drive.google.com/file/d/1JL7y0esIh6rpeKhrRazq_jtThb2OV52y/view?usp=sharing" class="project-link" target="_blank">
-                                <i class="fas fa-file-alt"></i>
-                                Project Poster
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <i class="fas fa-terminal"></i>
-                        <h4>Shell</h4>
-                        <p>Bash-like shell in C with job control, enabling foreground and background process management with signal handling</p>
-                    </div>
-                    <div class="project">
-                        <i class="fas fa-globe"></i>
-                        <h4>Everest Yang's Personal Website</h4>
-                        <p>My Personal Website built from scratch using HTML, CSS, and JavaScript. TBH, I'm not the biggest fan of WebDev but I made this website for fun :P</p>
-                    </div>
-                    </div>
-                </div>
-                <button type="button" class="project-carousel-btn project-carousel-btn--next" aria-label="Next projects">
-                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-    <!-------------------------- Contact Section -------------------------->
-    <section class="contact-content" id="contact">
-        <div class="container">
-            <h3 class="title">Let's Connect.</h3>
-            <p>Feel free to reach out and let me know how I can help!</p>
-            <div class="social">
-                <a href="mailto:everest_yang@brown.edu" aria-label="Email"><i class="fa fa-envelope"></i></a>
-                <a href="https://scholar.google.com/citations?user=phthMvUAAAAJ&hl=en" target="_blank" aria-label="Google Scholar"><i class="fa fa-graduation-cap"></i></a>
-                <a href="https://github.com/everestyang1" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/everestyang/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-    </div>
-</section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Everest Yang. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Wait for the DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add click event listeners to timeline items
-            const timelineItems = document.querySelectorAll('.timeline-item');
-            
-            timelineItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    // Toggle the expanded class
-                    this.classList.toggle('expanded');
-                    
-                    // Optional: Close other expanded items
-                    timelineItems.forEach(otherItem => {
-                        if (otherItem !== this && otherItem.classList.contains('expanded')) {
-                            otherItem.classList.remove('expanded');
-                        }
-                    });
-                });
-            });
-        });
-
-        // Scroll Animation
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.timeline-item, .project, .FirstElement').forEach((el) => {
-            observer.observe(el);
-        });
-
-        // Particle system
-        class ParticleSystem {
-            constructor() {
-                this.particles = [];
-                this.container = document.querySelector('.particles');
-                this.mouseX = 0;
-                this.mouseY = 0;
-                this.init();
-            }
-
-            init() {
-                // Create floating particles
-                for (let i = 0; i < 50; i++) {
-                    this.createParticle();
-                }
-
-                // Add mouse move listener
-                document.addEventListener('mousemove', (e) => {
-                    this.mouseX = e.clientX;
-                    this.mouseY = e.clientY;
-                    this.createInteractiveParticle(e.clientX, e.clientY);
-                });
-
-                // Animate particles
-                this.animate();
-            }
-
-            createParticle() {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                
-                // Random size between 2 and 6 pixels
-                const size = Math.random() * 4 + 2;
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                
-                // Random starting position
-                particle.style.left = `${Math.random() * 100}%`;
-                
-                // Random animation duration between 10 and 20 seconds
-                particle.style.animationDuration = `${Math.random() * 10 + 10}s`;
-                
-                // Random delay
-                particle.style.animationDelay = `${Math.random() * 5}s`;
-                
-                this.container.appendChild(particle);
-                
-                // Remove particle after animation
-                particle.addEventListener('animationend', () => {
-                    particle.remove();
-                    this.createParticle();
-                });
-            }
-
-            createInteractiveParticle(x, y) {
-                const particle = document.createElement('div');
-                particle.className = 'interactive-particle';
-                
-                // Random size between 3 and 8 pixels
-                const size = Math.random() * 5 + 3;
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                
-                // Set initial position
-                particle.style.left = `${x}px`;
-                particle.style.top = `${y}px`;
-                
-                this.container.appendChild(particle);
-                
-                // Animate particle
-                const angle = Math.random() * Math.PI * 2;
-                const velocity = Math.random() * 2 + 1;
-                const vx = Math.cos(angle) * velocity;
-                const vy = Math.sin(angle) * velocity;
-                
-                let posX = x;
-                let posY = y;
-                let opacity = 0.5;
-                
-                const animate = () => {
-                    posX += vx;
-                    posY += vy;
-                    opacity -= 0.02;
-                    
-                    particle.style.left = `${posX}px`;
-                    particle.style.top = `${posY}px`;
-                    particle.style.opacity = opacity;
-                    
-                    if (opacity > 0) {
-                        requestAnimationFrame(animate);
-                    } else {
-                        particle.remove();
-                    }
-                };
-                
-                requestAnimationFrame(animate);
-            }
-
-            animate() {
-                // Update interactive particles
-                this.particles = this.particles.filter(particle => {
-                    return particle.style.opacity > 0;
-                });
-                
-                requestAnimationFrame(() => this.animate());
-            }
-        }
-
-        // Initialize particle system
-        const particleSystem = new ParticleSystem();
-        
-        function initProjectCarousel() {
-            const carousel = document.querySelector('.project-carousel');
-            const track = carousel && carousel.querySelector('.project-track');
-            const prevBtn = document.querySelector('.project-carousel-btn--prev');
-            const nextBtn = document.querySelector('.project-carousel-btn--next');
-
-            if (!carousel || !track || !prevBtn || !nextBtn) {
-                return;
-            }
-
-            function getStep() {
-                const card = track.querySelector('.project');
-                if (!card) {
-                    return 382;
-                }
-                const gap = parseFloat(getComputedStyle(track).gap) || 32;
-                return card.getBoundingClientRect().width + gap;
-            }
-
-            function updateButtons() {
-                const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-                const eps = 3;
-                const atStart = carousel.scrollLeft <= eps;
-                const atEnd = carousel.scrollLeft >= maxScroll - eps;
-
-                prevBtn.disabled = atStart;
-                nextBtn.disabled = atEnd;
-                prevBtn.setAttribute('aria-disabled', String(atStart));
-                nextBtn.setAttribute('aria-disabled', String(atEnd));
-            }
-
-            var mqMobileProjects = window.matchMedia('(max-width: 768px)');
-
-            function syncProjectCardWidthsMobile() {
-                var cards = track.querySelectorAll('.project');
-                if (!cards.length) {
-                    return;
-                }
-                if (!mqMobileProjects.matches) {
-                    cards.forEach(function (card) {
-                        card.style.removeProperty('flex');
-                        card.style.removeProperty('width');
-                        card.style.removeProperty('max-width');
-                        card.style.removeProperty('min-width');
-                    });
-                    updateButtons();
-                    return;
-                }
-                var refItem = document.querySelector('.education-content .timeline-item');
-                var st = window.getComputedStyle(carousel);
-                var pl = parseFloat(st.paddingLeft) || 0;
-                var pr = parseFloat(st.paddingRight) || 0;
-                var inner = Math.floor(carousel.getBoundingClientRect().width - pl - pr);
-                var w;
-                if (refItem) {
-                    w = Math.round(refItem.getBoundingClientRect().width);
-                    w = Math.min(w, inner);
-                } else {
-                    w = inner;
-                }
-                if (w <= 0) {
-                    return;
-                }
-                cards.forEach(function (card) {
-                    card.style.flex = '0 0 ' + w + 'px';
-                    card.style.width = w + 'px';
-                    card.style.maxWidth = w + 'px';
-                    card.style.minWidth = '0';
-                    card.style.boxSizing = 'border-box';
-                });
-                updateButtons();
-            }
-
-            if (typeof ResizeObserver !== 'undefined') {
-                var roCarousel = new ResizeObserver(function () {
-                    window.requestAnimationFrame(syncProjectCardWidthsMobile);
-                });
-                roCarousel.observe(carousel);
-            }
-
-            window.addEventListener('resize', syncProjectCardWidthsMobile);
-            if (mqMobileProjects.addEventListener) {
-                mqMobileProjects.addEventListener('change', syncProjectCardWidthsMobile);
-            } else if (mqMobileProjects.addListener) {
-                mqMobileProjects.addListener(syncProjectCardWidthsMobile);
-            }
-            window.addEventListener('orientationchange', function () {
-                setTimeout(syncProjectCardWidthsMobile, 200);
-            });
-            syncProjectCardWidthsMobile();
-            window.requestAnimationFrame(function () {
-                window.requestAnimationFrame(syncProjectCardWidthsMobile);
-            });
-
-            let updateButtonsRaf = null;
-            function scheduleUpdateButtons() {
-                if (updateButtonsRaf !== null) return;
-                updateButtonsRaf = requestAnimationFrame(function () {
-                    updateButtonsRaf = null;
-                    updateButtons();
-                });
-            }
-
-            prevBtn.addEventListener('click', function () {
-                carousel.scrollBy({ left: -getStep(), behavior: 'smooth' });
-            });
-            nextBtn.addEventListener('click', function () {
-                carousel.scrollBy({ left: getStep(), behavior: 'smooth' });
-            });
-            carousel.addEventListener('scroll', scheduleUpdateButtons, { passive: true });
-            window.addEventListener('load', syncProjectCardWidthsMobile);
-            requestAnimationFrame(function () {
-                requestAnimationFrame(syncProjectCardWidthsMobile);
-            });
-        }
-
-        initProjectCarousel();
-
-        // Existing parallax effect
-        window.addEventListener('mousemove', (e) => {
-            const photo = document.querySelector('.profile-photo');
-            if (!photo) return;
-            const x = (e.clientX / window.innerWidth - 0.5) * 20;
-            const y = (e.clientY / window.innerHeight - 0.5) * 20;
-            
-            photo.style.transform = `translate(${x}px, ${y}px)`;
-        });
-
-        // Add highlight spots
-        function createHighlightSpots() {
-            const container = document.querySelector('.highlight-spots');
-            const spots = [
-                { size: '300px', top: '10%', left: '20%', delay: '0s' },
-                { size: '400px', top: '60%', left: '70%', delay: '2s' },
-                { size: '250px', top: '30%', left: '80%', delay: '4s' },
-                { size: '350px', top: '70%', left: '30%', delay: '6s' }
-            ];
-
-            spots.forEach(spot => {
-                const highlight = document.createElement('div');
-                highlight.className = 'highlight-spot';
-                highlight.style.width = spot.size;
-                highlight.style.height = spot.size;
-                highlight.style.top = spot.top;
-                highlight.style.left = spot.left;
-                highlight.style.animationDelay = spot.delay;
-                container.appendChild(highlight);
-            });
-        }
-
-        // Initialize highlight spots
-        createHighlightSpots();
-
-        // Photo carousel functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const photoContainer = document.querySelector('.smaller-photos');
-            const indicators = document.querySelectorAll('.photo-indicator');
-            
-            if (photoContainer && indicators.length > 0) {
-                // Update indicators based on scroll position
-                photoContainer.addEventListener('scroll', function() {
-                    const scrollLeft = photoContainer.scrollLeft;
-                    const containerWidth = photoContainer.offsetWidth;
-                    const currentIndex = Math.round(scrollLeft / containerWidth);
-                    
-                    // Update active indicator
-                    indicators.forEach((indicator, index) => {
-                        indicator.classList.toggle('active', index === currentIndex);
-                    });
-                });
-                
-                // Click indicators to scroll to specific photo
-                indicators.forEach((indicator, index) => {
-                    indicator.addEventListener('click', function() {
-                        const containerWidth = photoContainer.offsetWidth;
-                        photoContainer.scrollTo({
-                            left: index * containerWidth,
-                            behavior: 'smooth'
-                        });
-                    });
-                });
-            }
-        });
-    </script>
 </body>
 </html>
-
