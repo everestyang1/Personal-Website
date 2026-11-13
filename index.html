@@ -120,12 +120,76 @@
             border-radius: 4px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
         }
-        /* Match the classic Jon Barron template: no mobile media queries.
-           Body text stays left-aligned (only the name and links row are
-           centered via inline styles). Publication thumbnails keep their
-           natural width so the image-beside-text rows read the same on a
-           phone as they do on the reference sites. */
+        /* Click-to-expand names: a link that acts as a button and slides
+           open a short note under its paragraph (a link, not a <button>,
+           so long names wrap like normal text). */
+        .inline-trigger[aria-expanded="true"] {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .inline-note {
+            color: #555;
+        }
+        /* The paragraph that owns the notes drops its bottom margin, and
+           open notes add their own top margin. This keeps the gap to the
+           next paragraph at the normal 14px when every note is closed
+           (hidden notes would otherwise stop the margins from collapsing). */
+        .has-notes {
+            margin-bottom: 0;
+        }
+        .js .inline-note {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            visibility: hidden;
+            transform: translateY(-3px);
+            margin-top: 0;
+            margin-bottom: 0;
+            transition: max-height 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s,
+                        margin 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s,
+                        opacity 0.15s, transform 0.15s, visibility 0s linear 0.6s;
+        }
+        .js .inline-note.is-open {
+            max-height: var(--note-h, 200px);
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            margin-top: 10px;
+            margin-bottom: 0;
+            transition: max-height 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+                        margin 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+                        opacity 0.2s 0.12s, transform 0.2s 0.12s, visibility 0s;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .js .inline-note,
+            .js .inline-note.is-open {
+                transition: none;
+            }
+        }
+        /* Phones: stack each paper's thumbnail above its text so titles get
+           the full screen width instead of a ~150px column. Desktop keeps
+           the classic Jon Barron image-beside-text rows. (!important is
+           needed to override the cells' inline width/padding.) */
+        @media (max-width: 600px) {
+            .pubimg,
+            .pubtxt {
+                display: block;
+                width: auto !important;
+            }
+            .pubimg {
+                padding: 16px 20px 8px 20px !important;
+            }
+            .pubtxt {
+                padding: 0 20px 16px 20px !important;
+            }
+            .pubimg img {
+                width: 100%;
+                max-width: 280px;
+                height: auto;
+            }
+        }
     </style>
+    <script>document.documentElement.className += ' js';</script>
 </head>
 <body>
 
@@ -140,30 +204,57 @@
                         <name>Everest Yang</name>
                     </p>
                     <p>
-                        I am a Computer Science student at Brown University focusing on robotics, advised by Prof. <a href="https://cs.brown.edu/people/gdk/" target="_blank" rel="noopener">George Konidaris</a>.
-                        I also work with Prof. <a href="https://www.crr.columbia.edu/profile/igor-shuryak-md" target="_blank" rel="noopener">Igor Shuryak</a> at Columbia University Irving Medical Center.
+                        I am a CS student at Brown in the Intelligent Robot Lab, advised by <a href="https://cs.brown.edu/people/gdk/" target="_blank" rel="noopener">George Konidaris</a>.
+                        I also work with <a href="https://www.crr.columbia.edu/profile/igor-shuryak-md" target="_blank" rel="noopener">Igor Shuryak</a> at Columbia Medical Center.
                         I was honored to receive the <a href="https://www.brown.edu/news/2026-05-12/fellowships-goldwater-oxcam-knight-hennessy" target="_blank" rel="noopener">2026 Barry M. Goldwater Scholarship</a>.
                     </p>
-                    <p>
-                        I am broadly interested in action-conditioned world models, continual RL under non-stationary dynamics, and diffusion-based policy learning for robot manipulation.
-                        My research goal is to build general-purpose policies that enable robots to adapt and act robustly
+                    <p class="has-notes">
+                        I am broadly interested in
+                        <a class="inline-trigger" href="#note-wm" role="button" aria-expanded="false" aria-controls="note-wm">action-conditioned world models</a>
+                        and <a class="inline-trigger" href="#note-crl" role="button" aria-expanded="false" aria-controls="note-crl">continual reinforcement learning</a>.
+                        My research goal is to build general-purpose policies that enable robots to act robustly
                         in the real world.
                     </p>
-                    <p>
-                        I'm currently interning at <a href="https://research.netflix.com/" target="_blank" rel="noopener">Netflix Research</a>, working on causal Transformer architectures and PyTorch infra.
-                        I've also had the chance to work on distributed training for Lattice and Fury YFQ-44 at <a href="https://www.anduril.com/" target="_blank" rel="noopener">Anduril Industries</a>,
-                        LLM inference and post-training at <a href="https://aws.amazon.com/" target="_blank" rel="noopener">Amazon Web Services (AWS)</a>,
-                        vision-based robotic navigation for neurosurgery at <a href="https://www.zetasurgical.com/" target="_blank" rel="noopener">Zeta Surgical</a>,
-                        and Wi-Fi mapping aboard the ISS with Astrobee data at <a href="https://www.nasa.gov/johnson/engineering/" target="_blank" rel="noopener">NASA Research</a>.
+                    <p class="inline-note" id="note-wm">
+                        Action-conditioned world models learn latent dynamics that predict how an environment evolves in response to an agent's actions.
+                        I study how these models capture complex physical dynamics, generalize across environments, and support planning and decision-making for robotic manipulation.
                     </p>
-                    <p style="margin-top:20px">
+                    <p class="inline-note" id="note-crl">
+                        Continual reinforcement learning enables agents to keep learning as their environments change, balancing plasticity in adapting to new dynamics with stability in retaining prior knowledge.
+                        I study how agents can retain useful experience, adapt to non-stationary dynamics, and transfer learned behaviors across tasks.
+                    </p>
+                    <p class="has-notes">
+                        I've interned at
+                        <a class="inline-trigger" href="#note-netflix" role="button" aria-expanded="false" aria-controls="note-netflix">Netflix Research</a>,
+                        <a class="inline-trigger" href="#note-anduril" role="button" aria-expanded="false" aria-controls="note-anduril">Anduril Industries</a>,
+                        <a class="inline-trigger" href="#note-zeta" role="button" aria-expanded="false" aria-controls="note-zeta">Zeta Surgical</a>,
+                        <a class="inline-trigger" href="#note-aws" role="button" aria-expanded="false" aria-controls="note-aws">Amazon Web Services</a>,
+                        and <a class="inline-trigger" href="#note-nasa" role="button" aria-expanded="false" aria-controls="note-nasa">NASA Research</a>. (Click to expand!)
+                    </p>
+                    <p class="inline-note" id="note-netflix">
+                        At <a href="https://research.netflix.com/" target="_blank" rel="noopener">Netflix Research</a>, I worked on causal Transformer architectures and foundation models, focusing on large-scale pretraining, post-training, and inference optimization. I received a return offer.
+                    </p>
+                    <p class="inline-note" id="note-anduril">
+                        At <a href="https://www.anduril.com/" target="_blank" rel="noopener">Anduril Industries</a>, I built distributed ML infrastructure for the Lattice C2 Platform and worked on autonomy and perception algorithms for the Fury YFQ-44 autonomous fighter jet. I received a return offer.
+                    </p>
+                    <p class="inline-note" id="note-zeta">
+                        At <a href="https://www.zetasurgical.com/" target="_blank" rel="noopener">Zeta Surgical</a>, I worked on 3D vision-based robotic navigation for image-guided neurosurgery and developed focused ultrasound algorithms for transcranial targeting. I received a return offer.
+                    </p>
+                    <p class="inline-note" id="note-aws">
+                        At <a href="https://aws.amazon.com/" target="_blank" rel="noopener">Amazon Web Services</a>, I worked on LLM inference and post-training for foundation models, including RLHF, distillation, and model evaluation on Amazon Bedrock. I received a return offer.
+                    </p>
+                    <p class="inline-note" id="note-nasa">
+                        At <a href="https://www.nasa.gov/johnson/engineering/" target="_blank" rel="noopener">NASA Johnson Space Center</a>, I developed lunar Wi-Fi &amp; 3GPP infrastructure for Artemis IV and researched Wi-Fi signal propagation aboard the ISS using Astrobee. I received a return offer.
+                    </p>
+                    <p style="margin-top:18px">
                         If you'd like to chat, please reach out &mdash; I love meeting new people!
                     </p>
                     <p style="text-align:center;margin-top:24px">
                         <a href="mailto:everest_yang@brown.edu">Email</a> &nbsp;/&nbsp;
+                        <a href="https://github.com/everestyang1" target="_blank" rel="noopener">GitHub</a> &nbsp;/&nbsp;
                         <a href="https://www.linkedin.com/in/everestyang/" target="_blank" rel="noopener">LinkedIn</a> &nbsp;/&nbsp;
-                        <a href="https://scholar.google.com/citations?user=phthMvUAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a> &nbsp;/&nbsp;
-                        <a href="https://x.com/everest_yang" target="_blank" rel="noopener">Twitter</a>
+                        <a href="https://x.com/everest_yang" target="_blank" rel="noopener">X</a> &nbsp;/&nbsp;
+                        <a href="https://scholar.google.com/citations?user=phthMvUAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
                     </p>
                 </td>
                 <td class="photocell" style="padding:2.5%;width:37%;max-width:37%">
@@ -194,11 +285,11 @@
 
             <tr>
                 <td class="pubimg" style="padding:14px 14px 14px 20px;width:22%;vertical-align:middle">
-                    <a href="https://openreview.net/pdf?id=6GLn7p5QPX" target="_blank" rel="noopener"><img src="images/pub_changepoint.jpg" alt="Changepoint-Aware World Models" width="170">
+                    <a href="https://arxiv.org/pdf/2609.18950" target="_blank" rel="noopener"><img src="images/pub_changepoint.jpg" alt="Changepoint-Aware World Models" width="170">
 </a>
                 </td>
                 <td class="pubtxt" style="padding:14px 20px 14px 6px;vertical-align:middle">
-                    <a href="https://openreview.net/pdf?id=6GLn7p5QPX" target="_blank" rel="noopener"><papertitle>Changepoint-Aware World Models: Detecting Dynamics Shifts and Recovering by Forgetting Stale Replay in Model-Based RL</papertitle></a><br>
+                    <a href="https://arxiv.org/pdf/2609.18950" target="_blank" rel="noopener"><papertitle>Changepoint-Aware World Models: Detecting Dynamics Shifts and Recovering by Forgetting Stale Replay in Model-Based RL</papertitle></a><br>
                     <strong>E. Yang</strong>.<br>
                     <em>RSS Workshop on Robot World Models (R-WM), 2026.</em>
                 </td>
@@ -282,7 +373,7 @@
                 <td colspan="2" style="padding:20px 20px 2px 20px">
                     <p style="text-align:right;font-size:12px;color:#888;margin:0">
                         <a href="https://github.com/jonbarron/jonbarron.github.io" target="_blank" rel="noopener">Website template from Jon Barron</a>.<br>
-                        <span style="color:#000000">Last updated 9/30/26</span>
+                        <span style="color:#000000">Last updated 11/12/26</span>
                     </p>
                 </td>
             </tr>
@@ -290,6 +381,36 @@
     </table>
 
     <div style="height:80px;"></div>
+
+    <script>
+        (function () {
+            function fit(note) {
+                note.style.setProperty('--note-h', note.scrollHeight + 'px');
+            }
+            document.querySelectorAll('.inline-trigger').forEach(function (trigger) {
+                var note = document.getElementById(trigger.getAttribute('aria-controls'));
+                if (!note) return;
+                note.setAttribute('aria-hidden', 'true');
+                trigger.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var open = trigger.getAttribute('aria-expanded') !== 'true';
+                    fit(note);
+                    trigger.setAttribute('aria-expanded', String(open));
+                    note.setAttribute('aria-hidden', String(!open));
+                    note.classList.toggle('is-open', open);
+                });
+                trigger.addEventListener('keydown', function (e) {
+                    if (e.key === ' ') {
+                        e.preventDefault();
+                        trigger.click();
+                    }
+                });
+            });
+            window.addEventListener('resize', function () {
+                document.querySelectorAll('.inline-note.is-open').forEach(fit);
+            });
+        })();
+    </script>
 
 </body>
 </html>
